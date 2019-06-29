@@ -19,3 +19,4 @@ Route::get('/','IndexController@home');
 
 Route::get('/addProduct','ProductsController@new');
 Route::get('/addProduct','ProductsController@create');
+Route::get('/', 'IndexController@home');
