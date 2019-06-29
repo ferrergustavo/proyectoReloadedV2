@@ -13,17 +13,17 @@
                     @csrf
                     <div class="inputs">
                             <label for="nombre">Nombre:</label> <br>
-                            <input name="first_name" type="text" id="nombre" value="" placeholder="Ingrese su nombre ..." required  > <br>
+                            <input name="first_name" type="text" id="nombre" value=" {{old('fist_name')}} " placeholder="Ingrese su nombre ..." required  > <br>
                             <span class="errores">{{$errors->first('first_name')}} </span>
                     </div>
                     <div class="inputs">
                             <label for="nombre">Apellido:</label> <br>
-                            <input name="last_name" type="text" id="apellido" value="" placeholder="Ingrese su apellido ..." required  > <br>
+                            <input name="last_name" type="text" id="apellido" value=" {{old('last_name')}} " placeholder="Ingrese su apellido ..." required  > <br>
                             <span class="errores">{{$errors->first('last_name')}}</span>
                     </div>
                     <div class="inputs">
                       <label for="email">Email:</label> <!--NAME="email"--> <br>
-                      <input name="email" type="email" id="exampleInputEmail1" aria-describedby="emailHelp" value="" placeholder="Ingrese email ..."required > <br>
+                      <input name="email" type="email" id="exampleInputEmail1" aria-describedby="emailHelp" value=" {{old('email')}} " placeholder="Ingrese email ..."required > <br>
                       <span class="errores">{{$errors->first('email')}}</span>
                       <small id="emailHelp" class="form-text text-muted"></small>
                     </div>
