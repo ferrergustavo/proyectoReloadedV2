@@ -16,3 +16,8 @@
 
 Auth::routes();
 Route::get('/', 'IndexController@home');
+Route::get('/products','ProductsController@index');
+
+
+
+Route::get('/productsInfo','ProductsController@productInfo');
