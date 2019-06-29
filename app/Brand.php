@@ -9,4 +9,7 @@ class Brand extends Model
     protected $fillable = [
         'name_b',
     ];
+    public function product(){
+        return $this->belongsTo('app\Product');
+    }
 }

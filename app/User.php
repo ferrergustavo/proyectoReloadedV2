@@ -37,5 +37,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function product(){
+        return $this->belongsToMany('app\Product')->withPivot('products_id');
+    }
+
     public $timestamps = false;
 }

@@ -9,4 +9,7 @@ class Category extends Model
     protected $fillable = [
         'name_c',
     ];
+    public function product(){
+        return $this->belongsTo('app\Product');
+    }
 }
