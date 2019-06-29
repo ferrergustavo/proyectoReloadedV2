@@ -1,0 +1,17 @@
+.footer{
+    background-color: rgb(37, 37, 37);
+    height: 3em;
+    width: 100vw;
+}
+
+@font-face{
+    font-family:'neutra-bookalt';
+    src: url('../fonts/NEUTRATEXT-BOOKALT.OTF') format('opentype'); 
+ }
+
+ .footer_text{
+    text-align: center;
+    color: white;
+    font-family: 'neutra-bookalt';
+    size: 0.5 em;
+}

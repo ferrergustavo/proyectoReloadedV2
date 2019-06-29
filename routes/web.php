@@ -20,3 +20,8 @@ Route::get('/','IndexController@home');
 Route::get('/addProduct','ProductsController@new');
 Route::get('/addProduct','ProductsController@create');
 Route::get('/', 'IndexController@home');
+Route::get('/products','ProductsController@index');
+
+
+
+Route::get('/productsInfo','ProductsController@productInfo');
