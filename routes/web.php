@@ -13,11 +13,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 
 Auth::routes();
+Route::get('/','IndexController@home');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/addProduct','ProductsController@new');
+Route::get('/addProduct','ProductsController@create');
