@@ -50,70 +50,144 @@
 }
 .container_NavBarVertical{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     position: fixed;
-    top: 0;
-    left: 0;
     width: 125px;
     height: 100%;
     background: #000;
     z-index: 1001;
 }
+.logo_Vertical{
+    width: 100%;
+    height:21%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
 .logo_Vertical img{
     width: 116px;
     display: flex;
-    position: absolute;
+    position: relative;
     z-index: 1002;
-    left: 3px;
 }
-.logo_Vertical{
+
+.container_verticalIcons{
     width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    top:10%;
 }
+
+.shop_Icon{
+    width:100%;
+    height: 15%;
+    justify-content:center;
+    position: relative;
+    align-content: center;
+    display:flex;
+    align-items: center;
+    margin:0 auto;
+}
+
 .shop_Icon img{
-    width: 45px;
-    display: flex;
-    position: absolute;
-    z-index: 1002;
-    left: 40px;
-    top: 200px;
+    width:30%;
+    display:flex;
+    position: relative; 
 }
+
+.cart_Icon{
+    width:100%;
+    height: 15%;
+    justify-content:center;
+    position: relative;
+    align-content: center;
+    display:flex;
+    align-items: center;
+    margin:0 auto;
+}
+
 .cart_Icon img{
-    width: 45px;
-    display: flex;
-    position: absolute;
-    z-index: 1002;
-    left: 40px;
-    top: 280px;
+    width:30%;
+    display:flex;
+    position: relative; 
 }
-.profile_Icon img{
-    width: 45px;
-    display: flex;
-    position: absolute;
-    z-index: 1002;
-    left: 44px;
-    top: 437px;
+
+.search_Icon{
+    width:100%;
+    height: 15%;
+    justify-content:center;
+    position: relative;
+    align-content: center;
+    display:flex;
+    align-items: center;
+    margin:0 auto;
 }
+
+
 .search_Icon img{
-    width: 38px;
-display: flex;
-position: absolute;
-z-index: 1002;
-left: 47px;
-top: 365px;
-}
-.help_Icon img{
-    width: 29px;
+    width:30%;
     display: flex;
-    position: absolute;
-    z-index: 1002;
-    left: 47px;
-    top: 560px;
+    position:relative;
 }
-.container_verticalIcons .row{
-    position: absolute;
-    width: 100%;
-    display: block;
-    top: 50%;
-    margin: auto 0;
+
+.profile_Icon{
+    width:100%;
+    height: 15%;
+    justify-content:center;
+    position: relative;
+    align-content: center;
+    display:flex;
+    align-items: center;
+    margin:0 auto;
 }
+
+
+.profile_Icon img{
+    width:30%;
+    display:flex;
+    position: relative;
+}
+
+.help_Icon{
+    width:100%;
+    height: 15%;
+    justify-content:center;
+    position: relative;
+    align-content: center;
+    display:flex;
+    align-items: center;
+    margin:0 auto;
+    bottom:-10%;
+}
+
+.help_Icon img{
+    width:30%;
+    display:flex;
+    position: relative;
+}
+
+
+.admin_Icon{
+    display:none;
+    width:100%;
+    height: 15%;
+    justify-content:center;
+    position: relative;
+    align-content: center;
+    display:none;
+    align-items: center;
+    margin:0 auto;
+}
+
+.admin_Icon img{
+    width:30%;
+    display:flex;
+    position:relative;
+}
+
 }
