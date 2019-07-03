@@ -19,6 +19,8 @@ Route::get('/','IndexController@home');
 
 Route::get('/', 'IndexController@home');
 Route::get('/products','ProductsController@index');
+Route::get('/editprofile','EditProfileController@index');
+Route::get('/editprofile','EditProfileController@update');
 
 
 
