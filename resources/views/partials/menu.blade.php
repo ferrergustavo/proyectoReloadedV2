@@ -6,9 +6,9 @@
         <div class ="lineIcon"></div>
         </div>
         <a class="botonNavBar" href="search.php" ><img class="botonNavBar"src="img/search.svg" alt="Search"></a>
-        <div class="logo"><a href="index.php"><img src="img/logo.svg" alt=""></a></div>
+        <div class="logo"><a href="/"><img src="img/logo.svg" alt=""></a></div>
         <a class="botonNavBar" href="carrito.php" ><img class="botonNavBar"src="img/carrito.svg" alt="Shopping_Cart"></a>
-        <a class="botonNavBar" href="login.php" ><img class="botonNavBar"src="img/profile.png" alt="Profile_icon"></a>
+        <a class="botonNavBar" href="login" ><img class="botonNavBar"src="img/profile.png" alt="Profile_icon"></a>
         </div>
 <div class="container_NavBarVertical">
         <div class="logo_Vertical"><a href="index.php"><img src="img/logo.svg" alt=""></a></div>

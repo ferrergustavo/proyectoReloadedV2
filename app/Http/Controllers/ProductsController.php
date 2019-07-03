@@ -26,7 +26,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        //
+        return view('admProduct');
     }
 
     /**
@@ -83,5 +83,9 @@ class ProductsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function adm(){
+        return view('adm');
     }
 }

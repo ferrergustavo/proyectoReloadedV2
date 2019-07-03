@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'first_name', 'last_name','email','password','avatar','profile',
+        'first_name', 'last_name','email','password','avatar','profile','product_id',
     ];
 
     /**
@@ -25,7 +25,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token','api_token',
     ];
 
     /**
@@ -37,8 +37,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function cart(){
+        return $this->hasTo('Cart::class');
+    }
+
     public function product(){
-        return $this->belongsToMany('app\Product')->withPivot('products_id');
+        return $this->hasMany('Product::class');
     }
 
     public $timestamps = false;

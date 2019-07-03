@@ -1,3 +1,6 @@
 @include('partials.header')
 @include('partials.menu')
-@yield('content')
+
+@yield('admProduct')
+
+@include('partials_pau.footer')

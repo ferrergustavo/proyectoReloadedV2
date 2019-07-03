@@ -10,6 +10,6 @@ class Brand extends Model
         'name_b',
     ];
     public function product(){
-        return $this->belongsTo('app\Product');
+        return $this->hasMany('Product::class');
     }
 }

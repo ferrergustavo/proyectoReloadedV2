@@ -8,6 +8,7 @@
                 <div class="card-header">{{ __('Register') }}</div>-->
             <section class="section1">
             <article class="article1">
+              <h1>Register</h1>
                 <div class="card-body">
                 <form method="POST" action="{{ route('register') }}">
                     @csrf

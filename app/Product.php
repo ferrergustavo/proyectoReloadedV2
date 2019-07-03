@@ -10,13 +10,16 @@ class Product extends Model
         'name_p','description','price','stock','img_p','category_id','brand_id','new',
     ];
 
+    public function cart(){
+        return $this->belongsToMany('Cart::class')->withPivot('carts_id');
+    }
     public function user(){
-        return $this->belongsToMany('app\User')->withPivot('users_id');
+        return $this->belongsTo('User::class');
     }
     public function category(){
-        return $this->hasMany('app\Category');
+        return $this->belongsTo('Category::class');
       }
     public function brand(){
-        return $this->hasMany('app\Brand');
+        return $this->belongsTo('Brand:class');
     }
 }

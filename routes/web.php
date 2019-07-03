@@ -17,11 +17,18 @@
 Auth::routes();
 Route::get('/','IndexController@home');
 
-Route::get('/addProduct','ProductsController@new');
-Route::get('/addProduct','ProductsController@create');
 Route::get('/', 'IndexController@home');
 Route::get('/products','ProductsController@index');
 
 
 
 Route::get('/productsInfo','ProductsController@productInfo');
+
+
+
+// --Rutas De Adm --
+Route::get('/adm','ProductsController@adm');
+Route::get('/admProduct','ProductsController@show');
+Route::get('/admProduct/new','ProductsController@create');
+Route::delete('/admProduct/delete','ProductsController@destroy');
+Route::put('/admProduct/update','ProductsController@update');

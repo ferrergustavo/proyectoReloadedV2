@@ -1,7 +1,7 @@
-@extends('addProducts')
+@extends('layout.admProducts')
 
 
-@section('addProduct')
+@section('admProduct')
 <section class="section1">
             <article class="article1">
                 <div class="card-body">
@@ -31,9 +31,9 @@
                     </div>
                     <div class="inputs">
                        <select name="category" id="" required>
-                       <!-- @foreach
-
-                        @endforeach -->
+                        @foreach(brands as brand)
+                            <option value="{{$brand->brand_id}}">{{$brand->'name_b'}}</option>
+                        @endforeach 
                         </select>
                         <span class="errores">{{$errors->first('')}}</span>
                     </div>
