@@ -26,7 +26,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        return view('admProduct');
+        return view('admProductNew');
     }
 
     /**
@@ -87,5 +87,9 @@ class ProductsController extends Controller
 
     public function adm(){
         return view('adm');
+    }
+
+    public function list(){
+        return view('admProduct');
     }
 }
