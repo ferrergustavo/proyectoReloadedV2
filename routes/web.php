@@ -25,3 +25,12 @@ Route::get('/products','ProductsController@index');
 
 
 Route::get('/productsInfo','ProductsController@productInfo');
+
+
+
+
+
+
+
+Route::get('/searchResult','SearchController@show');
+Route::get('shoppingCart','CartController@show');
