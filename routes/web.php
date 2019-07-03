@@ -21,6 +21,8 @@ Route::get('/addProduct','ProductsController@new');
 Route::get('/addProduct','ProductsController@create');
 Route::get('/', 'IndexController@home');
 Route::get('/products','ProductsController@index');
+Route::get('/editprofile','EditProfileController@index');
+Route::get('/editprofile','EditProfileController@update');
 
 
 
