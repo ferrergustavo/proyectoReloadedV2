@@ -17,10 +17,10 @@
 Auth::routes();
 Route::get('/','IndexController@home');
 
-Route::get('/addProduct','ProductsController@new');
-Route::get('/addProduct','ProductsController@create');
 Route::get('/', 'IndexController@home');
 Route::get('/products','ProductsController@index');
+Route::get('/editprofile','EditProfileController@index');
+Route::get('/editprofile','EditProfileController@update');
 
 
 
@@ -34,3 +34,9 @@ Route::get('/productsInfo','ProductsController@productInfo');
 
 Route::get('/searchResult','SearchController@show');
 Route::get('shoppingCart','CartController@show');
+// --Rutas De Adm --
+Route::get('/adm','ProductsController@adm');
+Route::get('/admProduct','ProductsController@list');
+Route::get('/admProduct/new','ProductsController@create');
+Route::delete('/admProduct/delete','ProductsController@destroy');
+Route::put('/admProduct/update','ProductsController@update');

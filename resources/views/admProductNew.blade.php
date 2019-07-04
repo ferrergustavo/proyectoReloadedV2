@@ -1,8 +1,8 @@
-@extends('addProducts')
+@extends('layout.admProductsNew')
 
 
-@section('addProduct')
-<section class="section1">
+@section('admProductNew')
+    <section class="section1">
             <article class="article1">
                 <div class="card-body">
                 <form method="POST" action="{{ route('register') }}">
@@ -31,22 +31,23 @@
                     </div>
                     <div class="inputs">
                        <select name="category" id="" required>
-                       <!-- @foreach
-
-                        @endforeach -->
+                            @foreach(categorys as category)
+                                <option value="{{$category->category_id}}">{{$category->'name_c'}}</option>
+                            @endforeach 
                         </select>
                         <span class="errores">{{$errors->first('')}}</span>
                     </div>
                     <div class="inputs">
                        <select name="brand" id="" required>
-                        <!--@foreach
-
-                        @endforeach-->
+                        @foreach(brands as brand)
+                            <option value="{{$brand->brand_id}}">{{$brand->'name_b'}}</option>
+                        @endforeach 
+                        
                         </select>
                         <span class="errores">{{$errors->first('')}}</span>
                     </div>
                     <hr class="opt">
                   </form>
                   </article>
-                  </section>
+            </section>
 @endsection

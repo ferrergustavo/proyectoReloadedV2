@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ProductsController extends Controller
+class EditProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,12 +13,9 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        return view ('productos');
+        return view('editprofile');
     }
 
-    public function productInfo(){
-        return view ('productosInfo');
-    }
     /**
      * Show the form for creating a new resource.
      *
@@ -26,7 +23,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        return view('admProductNew');
+        //
     }
 
     /**
@@ -83,13 +80,5 @@ class ProductsController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function adm(){
-        return view('adm');
-    }
-
-    public function list(){
-        return view('admProduct');
     }
 }

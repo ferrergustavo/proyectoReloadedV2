@@ -1,4 +1,6 @@
 @include('partials.header')
 @include('partials.menu')
-@yield('content')
-@include('partials_pau.footer')
+
+@yield('Adm')
+
+<!--@include('partials_pau.footer')-->
