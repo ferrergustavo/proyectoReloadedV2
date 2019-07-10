@@ -30,7 +30,7 @@
             </div>
        
         <div class="help_Icon">
-            <a  class="nav_Icons" href="help.php"><img src="img/help.svg" alt="help_icon"> </a>
+            <a  class="nav_Icons" href="faqs"><img src="img/help.svg" alt="help_icon"> </a>
         </div>
         </div>
 </div>

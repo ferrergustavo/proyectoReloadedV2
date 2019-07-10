@@ -18,7 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('name_p');
             $table->longtext('description');
             $table->integer('price');
-            $table->boolean('stock');
+            $table->integer('stock');
             $table->longtext('img_p');
             $table->integer('category_id');
             $table->integer('brand_id');

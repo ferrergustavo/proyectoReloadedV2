@@ -40,3 +40,6 @@ Route::get('/admProduct','ProductsController@list');
 Route::get('/admProduct/new','ProductsController@create');
 Route::delete('/admProduct/delete','ProductsController@destroy');
 Route::put('/admProduct/update','ProductsController@update');
+// -- Rutas de navBar --
+Route::get('/faqs','FaqsController@index');
+Route::get('/selectedProduct','ProductsController@show');
