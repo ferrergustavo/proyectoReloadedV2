@@ -38,6 +38,12 @@ Route::get('/productsInfo','ProductsController@productInfo');
 
 
 
+
+
+
+
+Route::get('/searchResult','SearchController@show');
+Route::get('shoppingCart','CartController@show');
 // --Rutas De Adm --
 Route::get('/adm','ProductsController@adm');
 Route::get('/admProduct','ProductsController@list');
