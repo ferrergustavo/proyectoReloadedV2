@@ -19,10 +19,20 @@ Route::get('/','IndexController@home');
 
 Route::get('/', 'IndexController@home');
 Route::get('/products','ProductsController@index');
+
+
+
+
+// Rutas editar perfil
 Route::get('/editprofile','EditProfileController@index');
-Route::get('/editprofile','EditProfileController@update');
+Route::get('/editprofile/{id}','EditProfileController@edit');
+Route::put('/update/{id}', 'EditProfileController@update')->name('update');
 
 
+
+
+
+//
 
 Route::get('/productsInfo','ProductsController@productInfo');
 
