@@ -89,7 +89,7 @@ class EditProfileController extends Controller
 
         $user->save();
 
-        return redirect()->route('/editprofile');
+       
     }
 
     /**
