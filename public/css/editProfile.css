@@ -44,6 +44,11 @@
     position: relative;
 }
 
+.avatarEdit img{
+    width: 100%;
+    height:70%;
+}
+
 
 .edit3{
     display:flex;
