@@ -73,20 +73,21 @@ class EditProfileController extends Controller
         $user= User::find($id);
 
         $user->first_name = $request->input('first_name');
+        $user->last_name = $request->input('last_name');
         $user->email = $request->input('email');
 
 
         $path = $request->file('avatar');
 
+            if ($path) {
+                $filename = $path->store('public/avatars');
+                $dbFilename = explode('/',$filename);
+                $filename = 'storage/avatars/'.$dbFilename[2];
+                $user->avatar = $filename;
+        
+            }
 
-
-        if ($path) {
-            $path->storeAs('public/products', 'avatar'.$request->user()->id);
-            $user->avatar = 'storage/products/avatar'.$request->user()->id;
-        }
-
-
-
+            
         $user->save();
 
        

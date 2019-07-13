@@ -8,8 +8,7 @@
     <link rel="stylesheet" href='{{asset('css/index.css')}}'>
     <link rel="stylesheet" href='{{asset('css/navBar.css')}}'>
     <link rel="stylesheet" href='{{asset('css/adm.css')}}'>
-    
-    
+    <link rel="stylesheet" href='{{asset('css/footer.css')}}'>
     <link rel="stylesheet" href='{{asset('css/editProfile.css')}}'>
     <title>Document</title>
 </head>
