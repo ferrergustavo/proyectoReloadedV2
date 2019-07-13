@@ -16,24 +16,19 @@
             </tr>
           </thead>
           <tbody>
-              @foreach(products as product)
+              @foreach($products as $product)
                 <tr>
-
-                  <th scope="row">{{$product->product_id}}</th>
+                  <th>{{$product->product_id}}</th>
                   <td>nombre={{$product->name_p}}       -       price={{$product->price}}       -       stock={{$product->stock}}</td>
-                  <td><a href="">
+                  <td>
                         <a href="">agregar</a>
-                      </a>
                   </td>
-                  <td><a href="">
-                        <a href="">modificar</a>
-                      </a>
+                  <td>
+                        <a href="">modificar</a> 
                   </td>
-                  <td><a href="">
+                  <td>
                         <a href="">eliminar</a>
-                      </a>
                   </td>
-                  
                 </tr>
                   @endforeach
               </tbody>
