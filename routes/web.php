@@ -35,8 +35,19 @@ Route::get('/productsInfo','ProductsController@productInfo');
 Route::get('/searchResult','SearchController@show');
 Route::get('shoppingCart','CartController@show');
 // --Rutas De Adm --
-Route::get('/adm','ProductsController@adm');
-Route::get('/admProduct','ProductsController@list');
-Route::get('/admProduct/new','ProductsController@create');
-Route::delete('/admProduct/delete','ProductsController@destroy');
-Route::put('/admProduct/update','ProductsController@update');
+Route::get('/adm','admProductController@adm');
+Route::post('/adm','admProductController@adm');
+// -- Rutas De ADM Products -- 
+Route::get('/admProduct','admProductController@index');
+Route::get('/admProduct/create','admProductController@create');
+Route::get('/admProduct/show/{id}','admProductController@show');
+Route::delete('/admProduct/{id}','admProductController@destroy');
+Route::get('/admProduct/edit/{id}','admProductController@edit');
+Route::put('/editProduct/{id}','admProductController@update');
+
+// -- Rutas De ADM USER--
+Route::get('/admUser','admUserController@index');
+Route::get('/admUser/show/{id}','admUserController@show');
+Route::get('/admUser/edit/{id}','admUserController@edit');
+Route::delete('/admUser/{id}','admUserController@destroy');
+Route::put('/editUser/{id}','admUserController@update')->name('editUser');

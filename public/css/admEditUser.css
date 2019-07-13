@@ -1,0 +1,52 @@
+.sectionAdmUserEdit{
+    border: solid;
+    border-color: blueviolet;
+    border-width: 1px;
+    width: 80vw;
+    margin-top: 2em;
+    font-weight: 500;
+    color:#c7c7c7;
+}
+.h1EditUser{
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom:1em;
+    color:#c7c7c7;
+    text-transform: uppercase;
+}
+.hrAdmUserEdit{
+    border:solid;
+    border-width: 1px;
+    border-color: blueviolet;
+    margin-bottom: 1em;
+    color:#c7c7c7;
+}
+.inputsEditUser{
+    text-align: center;
+}
+.inputsEditUser input{
+    background: none;
+    color: white;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-color: blueviolet;
+    text-align:center;
+}
+.botAdmUserEdit{
+    background:none;
+    width: 35vw;
+}
+.divBoton{
+    align-content: center;
+    margin-right: 25%;
+    font-size: 0.9em;
+}
+.UserName{
+    color: blueviolet;
+}
+@media (max-width:768px){
+    .divBoton{
+        font-size: 1.3em;
+    }
+}

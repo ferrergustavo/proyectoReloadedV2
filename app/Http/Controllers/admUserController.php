@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
-class ProductsController extends Controller
+class admUserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,12 +14,11 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        return view ('productos');
+        $users = User::orderBy('first_name')->get();
+        $users = \App\User::paginate(10);
+        return view('adm.users.index', compact('users'));
     }
 
-    public function productInfo(){
-        return view ('productosInfo');
-    }
     /**
      * Show the form for creating a new resource.
      *
@@ -26,7 +26,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        return view('admProductNew');
+        //
     }
 
     /**
@@ -48,7 +48,8 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        //
+        $user=User::find($id);
+        return view('adm.users.show',compact('user'));
     }
 
     /**
@@ -59,7 +60,8 @@ class ProductsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view('adm.users.edit',compact('user'));
     }
 
     /**
@@ -71,7 +73,22 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+            'first_name'=> ['string', 'max:255','alpha'],
+            'last_name'=>['string','max:255','alpha'],
+            'email'=>['string', 'email', 'max:255'],
+            'profile'=>['integer','min:0','numeric']
+        ]);
+
+        $user=User::find($id);
+
+        $user->first_name = $request->input('first_name');
+        $user->last_name = $request->input('last_name');
+        $user->email = $request->input('email');
+        $user->profile = $request->input('profile');
+        $user->save();
+        return redirect('/admUser');
+
     }
 
     /**
@@ -82,7 +99,9 @@ class ProductsController extends Controller
      */
     public function destroy($id)
     {
-        //
-    }
+        $user = User::find($id);
+        $user->delete();
 
+        return redirect('/admUser');
+    }
 }

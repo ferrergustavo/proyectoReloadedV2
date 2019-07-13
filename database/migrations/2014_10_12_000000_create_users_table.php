@@ -22,9 +22,9 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->longtext('avatar');
             $table->integer('profile');
-            $table->string('product_id');
+            $table->string('product_id')->nullable();
             $table->rememberToken();
-            $table->string('api_token');
+            $table->string('api_token')->nullable();
             $table->timestamps();   
         });
     }
