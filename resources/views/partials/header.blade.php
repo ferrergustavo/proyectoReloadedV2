@@ -7,11 +7,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href='{{asset('css/index.css')}}'>
     <link rel="stylesheet" href='{{asset('css/navBar.css')}}'>
-    <link rel="stylesheet" href='{{asset('css/adm.css')}}'>
     <link rel="stylesheet" href='{{asset('css/footer.css')}}'>
+    <link rel="stylesheet" href='{{asset('css/editProfile.css')}}'>
+    <!-- CSS ADM -->
+    <link rel="stylesheet" href='{{asset('css/adm.css')}}'>
+    <!-- CSS ADM User -->
     <link rel="stylesheet" href='{{asset('css/admUser.css')}}'>
     <link rel="stylesheet" href='{{asset('css/admEditUser.css')}}'>
-    <link rel="stylesheet" href='{{asset('css/editProfile.css')}}'>
-    <title>Document</title>
+    <link rel="stylesheet" href='{{asset('css/admUserShow.css')}}'>
+    <!-- CSS ADM Products-->
+    <link rel="stylesheet" href='{{asset('css/admProduct.css')}}'>
+    <link rel="stylesheet" href='{{asset('css/admProductCreate.css')}}'>
+
+    <title>BlackEyesGaming</title>
 </head>
 <body>

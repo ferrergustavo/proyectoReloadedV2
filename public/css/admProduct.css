@@ -1,5 +1,5 @@
 
-.sectionAdmUser{
+.sectionAdmProduct{
     border: solid;
     border-color: blueviolet;
     border-width: 1px;
@@ -8,31 +8,31 @@
     font-weight: 500;
     color:#c7c7c7;
 }
-.hrAdmUser{
+.hrAdmProduct{
     border:solid;
     border-width: 1px;
     border-color: blueviolet;
     margin-bottom: 1em;
     color:#c7c7c7;
 }
-.h1AdmUser{
+.h1AdmProduct{
     text-align: center;
     margin-top: 1em;
     margin-bottom:1em;
     color:#c7c7c7;
 }
-.tdAdmUser{
+.tdAdmProduct{
    padding: 0.4em;
    color:#c7c7c7;
 }
-.tdAdmUser a{
+.tdAdmProduct a{
     color: #c7c7c7;
     text-decoration-color: blueviolet;
 }
-.trAdmUser{
+.trAdmProduct{
     color:#c7c7c7;
 }
-.tdAdmUser a:hover{
+.tdAdmProduct a:hover{
     text-decoration: none;
     color: blueviolet;
 }
@@ -40,9 +40,17 @@
     margin-left: 0.5vw;
     width: 1vw;
 }
+.aNewProduct{
+    color: #c7c7c7;
+    text-decoration: none;
+}
+.aNewProduct:hover{
+    color: red;
+    text-decoration: underline;
+}
 
 @media (max-width:532px){
-    .sectionAdmUser{
+    .sectionAdmProduct{
         width: 95vw;
         font-size: .9em;
         color:#c7c7c7;

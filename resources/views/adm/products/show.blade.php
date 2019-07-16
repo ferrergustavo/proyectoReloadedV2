@@ -1,13 +1,9 @@
-@section('content')
+@section('admProduct')
 <div>
     <section>
         <article>
             <section>
-                <article>
-                    <a href="{{route('products.edit', ['id' => $product->id])}}">Editar</a>
-                    <a href="{{route('products.delete', ['id' => $product->id])}}">Eliminar</a>
-                    <a href="{{route('products.index')}}">Index Productos</a>
-                </article>
+            <a href="../admProduct" class="aReturn"><- Return</a>
             </section> 
             <section>
                 <article>
@@ -35,6 +31,11 @@
                     </dl>
                     <hr>
                 </article> 
+                <article>
+                    <a href="{{route('products.edit', ['id' => $product->id])}}">Editar</a>
+                    <a href="{{route('products.delete', ['id' => $product->id])}}">Eliminar</a>
+                    <a href="{{route('products.index')}}">Index Productos</a>
+                </article>
             </section> 
         </article>
     </section>

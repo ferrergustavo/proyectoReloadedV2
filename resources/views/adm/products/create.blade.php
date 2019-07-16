@@ -1,53 +1,59 @@
-@extends('layout.admProductsNew')
+@extends('layouts.admProductsNew')
 
 
 @section('admProductNew')
-    <section class="section1">
-            <article class="article1">
+    <section class="sectionAdmProductCreate">
+            <article class="articleAdmProductCreate">
+                <a href="../admProduct" class="aReturn"><- Return</a>
+                <h1 class="h1AdmProductCreate">Crear Nuevo Producto:</h1>
                 <div class="card-body">
-                <form method="POST" action="{{route('products.store')}}">
+                <form method="POST" action="" enctype="multipart/form-data">
                     @csrf
-                    <div class="inputs">
-                            <label for="name_p">Nombre del Producto:</label> <br>
-                            <input name="name_p" type="text" id="nombre" value=" {{old('')}} " placeholder="Ingrese nombre del producto" required  > <br>
+                    <div class="inputsAdmProductCreate">
+                            <label for="name_p">Nombre del Producto:</label>
+                            <input name="name_p" type="text" id="nombre" value="" placeholder="Ingrese nombre del producto" required  > <br>
                             <span class="errores">{{$errors->first('name_p')}} </span>
-                    </div>
-                    <div class="inputs">
-                            <label for="descripcion">descripcion del Producto:</label> <br>
-                            <input name="description" type="textarea" id="description" value=" {{old('')}} " placeholder="Ingrese descripcion del producto ..." required  > <br>
+                    </div> <br>
+                    <div >
+                            <label for="descripcion">descripcion del Producto:</label><br>
+                            <input name="description" type="textarea" id="description" value="" placeholder="Ingrese descripcion del producto ..." required  class="inputDescription" > <br>
                             <span class="errores">{{$errors->first('description')}}</span>
-                    </div>
-                    <div class="inputs">
-                            <label for="confirmcontra">Precio:</label> <br> 
-                            <input name="price" type="number" id="price" value=" {{old('')}} " placeholder="Ingrese precio" required  > <br>
+                    </div><br>
+                    <div class="inputsAdmProductCreate">
+                            <label for="confirmcontra">Precio:</label>
+                            <input name="price" type="number" id="price" value="" placeholder="Ingrese precio" required  > <br>
                             <span class="errores">{{$errors->first('price')}}</span>                      
-                    </div>
-                    <div class="inputs">
-                        <input type="checkbox" name="stock"required>
-                    </div>
-                    <div class="inputs">
-                         Imagen del producto: <input type="file" name="img_p" required>
-                         <span class="errores">{{$errors->first('img_p')}}</span>
-                    </div>
-                    <div class="inputs">
-                       <select name="category" id="" required>
-                            @foreach(categories as category)
-                                <option value="{{$category->category_id}}">{{$errors->first('category_id')}}</option>
+                    </div> <br>
+                    <div class="inputsAdmProductCreate">
+                        <label for="srock">Stock:</label>
+                        <input type="number" id="stock" name="stock" placeholder="ingrese el stock" required>
+                    </div> <br>
+                    <div class="inputsAdmProductCreate">
+                        <label for="category">Category:</label>
+                        <select name="category" id="" class="selectAdmProductCreate" required>
+                            @foreach($categories as $category)
+                                <option value="{{$category->category_id}}">{{$category->name_c}}</option>
                             @endforeach 
                         </select>
                         <span class="errores">{{$errors->first('categoty')}}</span>
-                    </div>
+                    </div> <br>
                     <div class="inputs">
-                       <select name="brand" id="" required>
-                        @foreach(brands as brand)
-                            <option value="{{$brand->brand_id}}">{{$brand->'name_b'}}</option>
+                    <label for="brand">Brand:</label>
+                       <select name="brand" id="" class="selectAdmProductCreate" required>
+                        @foreach($brands as $brand)
+                            <option value="{{$brand->brand_id}}">{{$brand->name_b}}</option>
                         @endforeach 
                         
                         </select>
                         <span class="errores">{{$errors->first('brand_id')}}</span>
+                    </div> <br>
+                    <div class="inputsAdmProductCreate">
+                         Imagen del producto: <input type="file" name="img_p" required>
+                         <span class="errores">{{$errors->first('img_p')}}</span>
                     </div>
-                    
-                    <hr class="opt">
+                    <div class="botonAdmProductCreate">            
+                        <button class="btnAdmProductCreate">Crear</button>
+                    </div>
                   </form>
                   </article>
             </section>

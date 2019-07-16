@@ -32,7 +32,8 @@ class admProductController extends Controller
     {
         $brands=Brand::All();
         $categories=Category::All();
-        return view('adm.products.create',compact('brands','categories'));
+        $products=Product::all();
+        return view('adm.products.create',compact('brands','categories','products'));
     }
 
     /**
@@ -49,7 +50,8 @@ class admProductController extends Controller
             "brand_id" => 'required',
             "category_id" => 'required',
             "price" => 'required|integer',
-            "stock" => "required|integer",
+            "stock" => 'required|integer',
+            "img_p"=>'image',
         ]);
 
         $product = new Product([
@@ -59,8 +61,18 @@ class admProductController extends Controller
             'category_id' => $request->input("category_id"),
             'price' => $request->input("price"),
             'stock' => $request->input("stock"),
+            'img_p'=>'storage/products/',
         ]);
         
+        $path = $request->file('img_p');
+
+        $extension = $request->file('img_p')->extension();
+
+        if (!is_null($path)) {
+            $path->storeAs('public/products', '1'.$request->user()->id.'.'.$extension);
+            $product->img_p = 'storage/products/1'.$request->user()->id;
+        }
+
         $product->save();
         return redirect('/adm');
 
@@ -140,5 +152,21 @@ class admProductController extends Controller
 
     public function adm(){
         return view('adm.adm');
+    }
+
+    public function brand(){
+        return view('adm.products.brand');
+    }
+
+    public function createBrand(Request $request){
+        $this->validate($request, [
+            "name_b" => 'required|unique:brand|string',
+        ]);
+        $brand = new Brand([
+            'name_b' => $request->input("name_b"),
+        ]);
+
+        $brand->save();
+        return redirect('/admProduct');
     }
 }

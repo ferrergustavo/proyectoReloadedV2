@@ -6,6 +6,7 @@
     margin-top: 2em;
     font-weight: 500;
     color:#c7c7c7;
+    margin-bottom: 6%;
 }
 .h1EditUser{
     text-align: center;
@@ -41,9 +42,13 @@
     align-content: center;
     margin-right: 25%;
     font-size: 0.9em;
+    margin-bottom: 2%;
 }
 .UserName{
     color: blueviolet;
+}
+.UserName:hover{
+    color:red;
 }
 @media (max-width:768px){
     .divBoton{

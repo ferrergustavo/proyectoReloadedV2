@@ -53,7 +53,9 @@ Route::get('/admProduct/create','admProductController@create');
 Route::get('/admProduct/show/{id}','admProductController@show');
 Route::delete('/admProduct/{id}','admProductController@destroy');
 Route::get('/admProduct/edit/{id}','admProductController@edit');
-Route::put('/editProduct/{id}','admProductController@update');
+Route::put('/editProduct/{id}','admProductController@update')->name('editProduct');
+Route::get('/admProduct/newBrand','admProductController@brand');
+Route::post('/admProduct/newBrandEnviar','admProductController@createBrand');
 
 // -- Rutas De ADM USER--
 Route::get('/admUser','admUserController@index');

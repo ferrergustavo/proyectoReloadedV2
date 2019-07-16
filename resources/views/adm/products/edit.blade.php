@@ -1,6 +1,8 @@
 @section('admProductUpdate')
     <section class="section1">
             <article class="article1">
+                 <a href="../admProduct" class="aReturn"><- Return</a>
+                <h1 class="admProductEdit">Editar Producto</h1>
                 <div class="card-body">
                 <form method="POST" action="{{route('products.store')}}">
                     @csrf

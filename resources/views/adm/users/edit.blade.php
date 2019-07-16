@@ -2,6 +2,7 @@
 @section('admUserEdit')
     <section class="sectionAdmUserEdit">
             <article class="article1">
+                <a href="../../admUser" class="aReturn"><- Return</a>
                     <h1 class="h1EditUser">El usuario <strong class="UserName">{{$user->last_name}},{{$user->first_name}}</strong> esta siendo modificado</h1> 
                     <hr class="hrAdmUserEdit">
                 <div class="card-body">
@@ -36,7 +37,6 @@
                         </div>
                     </div>
                     
-                    <hr class="opt">
                   </form>
                   </article>
             </section>

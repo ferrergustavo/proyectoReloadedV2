@@ -37,7 +37,7 @@ window.onload = function(){
                 }
                 })
                 Swal.clickConfirm({
-                    location.href='/admUser/editUser/{{$user->id}}';
+                   // location.href='/admUser/editUser/{{$user->id}}';
                 })
         }
 }
