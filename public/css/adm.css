@@ -76,3 +76,13 @@ h1{
         margin-top: 10%;
     }
 }
+.aReturn{
+    color: #c7c7c7;
+    text-decoration: none;
+    font-weight: bolder;
+}
+.aReturn:hover{
+    color: red;
+    text-decoration: none;
+    font-size: 1.1em;
+}

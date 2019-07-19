@@ -1,5 +1,4 @@
 @include('partials.header')
-@include('partials.menu')
 
 @yield('admProductNew')
 

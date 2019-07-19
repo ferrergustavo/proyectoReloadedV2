@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class EditProfileController extends Controller
 {
@@ -56,7 +57,8 @@ class EditProfileController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view('editProfile', compact('user'));
     }
 
     /**
@@ -68,7 +70,27 @@ class EditProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user= User::find($id);
+
+        $user->first_name = $request->input('first_name');
+        $user->last_name = $request->input('last_name');
+        $user->email = $request->input('email');
+
+
+        $path = $request->file('avatar');
+
+            if ($path) {
+                $filename = $path->store('public/avatars');
+                $dbFilename = explode('/',$filename);
+                $filename = 'storage/avatars/'.$dbFilename[2];
+                $user->avatar = $filename;
+        
+            }
+
+            
+        $user->save();
+
+       
     }
 
     /**

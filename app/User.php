@@ -5,6 +5,8 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Cart;
+use App\Product;
 
 class User extends Authenticatable
 {
@@ -38,11 +40,11 @@ class User extends Authenticatable
     ];
 
     public function cart(){
-        return $this->hasTo('Cart::class');
+        return $this->hasTo(Cart::class);
     }
 
     public function product(){
-        return $this->hasMany('Product::class');
+        return $this->hasMany(Product::class);
     }
 
     public $timestamps = false;

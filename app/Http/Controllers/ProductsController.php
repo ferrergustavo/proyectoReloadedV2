@@ -85,11 +85,4 @@ class ProductsController extends Controller
         //
     }
 
-    public function adm(){
-        return view('adm');
-    }
-
-    public function list(){
-        return view('admProduct');
-    }
 }
