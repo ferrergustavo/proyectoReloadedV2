@@ -47,31 +47,33 @@ class admProductController extends Controller
         $this->validate($request, [
             "name_p" => 'required|unique:products',
             "description"  => 'required',
-            "brand_id" => 'required',
-            "category_id" => 'required',
             "price" => 'required|integer',
             "stock" => 'required|integer',
-            "img_p"=>'image',
+            "category_id" => 'required',
+            "brand_id" => 'required',
+            "img_p"=> 'image',
+            "nameImg"=>'required|alpha_num',
         ]);
-
         $product = new Product([
             'name_p' => $request->input("name_p"),
             'description' => $request->input("description"),
-            'brand_id' => $request->input("genre_id"),
-            'category_id' => $request->input("category_id"),
             'price' => $request->input("price"),
             'stock' => $request->input("stock"),
-            'img_p'=>'storage/products/',
+            'category_id' => $request->input("category_id"),
+            'brand_id' => $request->input("brand_id"),
+            'img_p'=>'storage/products/'.$request->input("nameImg"),
+            'new'=>false,
         ]);
         
+        $nameImg = $request->input("nameImg");
+
         $path = $request->file('img_p');
 
         $extension = $request->file('img_p')->extension();
 
         if (!is_null($path)) {
-            $path->storeAs('public/products', '1'.$request->user()->id.'.'.$extension);
-            $product->img_p = 'storage/products/1'.$request->user()->id;
-        }
+            $path->storeAs('public/products',$nameImg.'.'.$extension);
+            }
 
         $product->save();
         return redirect('/adm');
@@ -98,10 +100,10 @@ class admProductController extends Controller
      */
     public function edit($id)
     {
-        $categories=Category::all();
-        $brands=Brand::all();
-        $products=Product::all();
-        return view('adm.products.edit',compact('categories','brands','products'));
+        $products=Product::find($id);   
+        $categories=Category::All();
+        $brands=Brand::All();
+        return view('adm.products.edit',compact('products','categories','brands'));
     }
 
     /**
@@ -116,24 +118,40 @@ class admProductController extends Controller
         $this->validate($request, [
             "name_p" => 'required|string|max:255',
             "description"  => 'required|string',
+            "price" => 'required|integer',
+            "stock" => 'required|integer',
             "category_id" => 'required',
             "brand_id"=>'required',
-            "price" => 'required|integer',
-            "stock" => "required|integer",
+            "img_p"=> 'image',
+            "nameImg"=>'required|alpha_num',
         ]);
+        $product=Product::find($id);
+        
+            $product->name_p = $request->input('name_p');
+            $product->description = $request->input('description');
+            $product->price = $request->input('price');
+            $product->stock = $request->input('stock');
+            $product->category_id = $request->input('category_id');
+            $product->brand_id = $request->input('brand_id');
+            
+            $nameImg = $request->input('nameImg');
+            
+            $path = $request->file('img_p');
+            $extension = $request->file('img_p')->extension();
 
-        $product = Product::find($id);
+            if (!is_null($path)) {
+                $imgFinal = $path->storeAs('public/products',$nameImg.'.'.$extension);
+                $product->img_p = $imgFinal;
+                }
+            
+            $product->new=false;
+            $product->save();
 
-        $product->name = $request->input("name");
-        $product->description = $request->input("description");
-        $product->category_id = $request->input("category_id");
-        $product->brand_id = $request->input("brand_id");
-        $product->price = $request->input("price");
-        $product->stock = $request->input("stock");
+            return redirect('/admProduct');
 
-        $product->save();
 
-        return redirect()->route('products.show',['id' => $id]);
+
+        
     }
 
     /**
@@ -147,7 +165,7 @@ class admProductController extends Controller
         $product = Product::find($id);
         $product->delete();
 
-        return redirect()->route("products.index");
+        return redirect('/admProduct');
     }
 
     public function adm(){

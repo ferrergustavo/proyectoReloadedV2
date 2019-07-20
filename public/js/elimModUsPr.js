@@ -1,6 +1,5 @@
 
 window.onload = function(){
-    alert("hello there");
         let eliminar=document.querySelector('#eliminar');
         let modificar=document.querySelector('#modif');
         eliminar.onclick=function(){
@@ -21,8 +20,8 @@ window.onload = function(){
                 }
                 })
         }
-        modificar.onclick=function(){
-            Swal.fire({
+            modificar.onclick=function(){
+             Swal.fire({
                 title: 'Seguro que queres modificar este usuario?',
                 type: 'question',
                 showCancelButton: true,

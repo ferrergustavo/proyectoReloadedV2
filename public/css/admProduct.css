@@ -48,7 +48,18 @@
     color: red;
     text-decoration: underline;
 }
-
+.eliminarAdmUser{
+    background: none;
+    color: #c7c7c7;
+    border: none;
+    height: 15px;
+    text-align:left;
+    margin: 0;
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: lowercase;
+    padding: 0;
+}
 @media (max-width:532px){
     .sectionAdmProduct{
         width: 95vw;

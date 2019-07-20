@@ -23,7 +23,7 @@
               @foreach($products as $product)
                 <tr>
                   <th>{{$product->product_id}}</th>
-                  <td class="tdAdmProduct">nombre= {{$product->name_p}}       -       price= {{$product->price}}       -       stock= {{$product->stock}}       -       brand= {{$product->brand}}</td>
+                  <td class="tdAdmProduct">nombre= {{$product->name_p}}       -       price= {{$product->price}}       -       stock= {{$product->stock}}</td>
                   <td class="tdAdmProduct">
                         <a href="admProduct/edit/{{$product->id}}">modificar</a> 
                   </td>
@@ -31,7 +31,7 @@
                     <form method="POST" action="admProduct/{{$product->id}}">
                         @method('DELETE')
                         @csrf
-                        <button type="submit" id="eliminar">eliminar</button>
+                        <button type="submit" id="eliminar" class="eliminarAdmUser">eliminar</button>
                         <!--<a href="" id="eliminar">eliminar</a> -->
                       </form>
                   </td>

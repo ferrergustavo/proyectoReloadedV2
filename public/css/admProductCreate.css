@@ -58,7 +58,7 @@
 .btnAdmProductCreate{
     background: none;
     border-color: blueviolet;
-    width: 35vw; 
+    width: 100%; 
 }
 .botonAdmProductCreate{
     align-content: center;
