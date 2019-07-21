@@ -19,6 +19,6 @@
     <link rel="stylesheet" href='{{asset('css/admProduct.css')}}'>
     <link rel="stylesheet" href='{{asset('css/admProductCreate.css')}}'>
 
-    <title>BlackEyesGaming</title>
+    <title>:: BlackEye Gaming ::</title>
 </head>
 <body>
