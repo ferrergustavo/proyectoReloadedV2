@@ -9,11 +9,11 @@
 .botonLineas{
     background-color: black;
     width: 33px;
-    margin-top: 18
-    px;
    
 }
-
+.main_{
+    width:100%;
+}
 .container_navBar{
     position: fixed;
     top: 0;
@@ -83,6 +83,15 @@
     top:10%;
 }
 
+.container_verticalIcons button{
+    background-color:#000;
+    border:none;
+}
+
+.container_verticalIcon button:focus{
+    outline: none;
+}
+
 .shop_Icon{
     width:100%;
     height: 15%;
@@ -92,6 +101,10 @@
     display:flex;
     align-items: center;
     margin:0 auto;
+}
+
+.shop_Icon button:focus{
+    outline:none;
 }
 
 .shop_Icon img{
@@ -190,4 +203,88 @@
     position:relative;
 }
 
+.shop_display{
+    width:0;
+    background-color:rgba(19,19,19,0.9);
+    height: 100vh;
+    position:fixed;
+    z-index:1000;
+    transition:0.5s;
 }
+.shop_display .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+}
+.categories{
+    font-size:1.8vw;
+    color:black;
+    position:absolute;
+    top:20%;
+    width:78%;
+    right:0px;
+}
+
+.categories li{
+    width:100%;
+    list-style-type: none;
+    overflow:hidden;
+    height: 26%;
+    border-style:solid;
+    border-color:rgb(15, 0, 19);
+}
+
+.categories li:hover{
+    box-shadow: inset 0px 0px 80px 27px rgba(237,216,237,1);
+
+}
+.categories img{
+    width:100%;
+    height:140%;
+}
+
+.categories li a{
+    position:absolute;
+    padding:3%;
+}
+ .categories .teclado__ a{
+    top:0;
+    text-decoration:none;
+    color:white;
+ }
+ .categories .mouse__ a{
+    top:52%;
+    color:white;
+    text-decoration:none;
+
+ }
+ .categories .auriculares__ a{
+    top:26%;
+    color:white;
+    text-decoration:none;
+ }
+
+ .categories .teclado__ a:hover{
+    color:rgba(255, 255, 255, 0.534);
+ }
+ .categories .mouse__ a:hover{
+    color:rgba(255, 255, 255, 0.534);
+ }
+ .categories .auriculares__ a:hover{
+    color:rgba(255, 255, 255, 0.534);
+ }
+
+
+
+
+
+

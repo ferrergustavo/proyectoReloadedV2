@@ -12,71 +12,6 @@ body{
    src: url('../fonts/NEUTRATEXT-BOOKALT.OTF') format('opentype'); 
 }
 
-/*
-.sidebar{
-   position: absolute;
-   width: 250px;
-   height:100%;
-   background:#333;
-   color:#fff;
-   outline: 1px solid #2a2a2a;
-}
-
-.sidebar h2{
-   text-align:center;
-   margin:0;
-   padding: 10px;
-   background:#2a2a2a;
-}
-
-.sidebar ul{
-   list-style:none;
-   padding: 0;
-   margin:0;
-}
-
-.sidebar li{
-   outline: 1px solid #2a2a2a;
-   transition: all 0.3s;
-}
-
-.sidebar li:hover {
-   background: #444;
-   border-left: 5px solid #eee;
-}
-
-.sidebar a {
-   display:block;
-   color: #fff;
-   text-decoration: none;
-   padding: 10px;
-}
-
-.container{
-   width:100%;
-   height:100%;
-   position:absolute;
-   background:#eee;
-   padding: 30px;
-   z-index:1001;
-   display: flex;
-   transition: all 0.3s;
-
-}
-
-.container img{
-   width: 5%;
-   height: 10%;
-}
-
-.menu-bar{
-   cursor: pointer;
-}
-
-.abrir {
-   transform: translateX(250px);
-}
-/*---------*/
 
 
 /*---Slider--*/
@@ -89,8 +24,7 @@ body{
 .slideshow{
    width:100%;
    position:relative;
-   top:77px;
-   overflow: hidden;
+   top:53px;
 }
 
 .slider li, ul{
@@ -101,11 +35,23 @@ body{
    width:100%;
    z-index: 100;
 }
+.slider_{
+   position:absolute;
+}
+
+.slider-hidden {
+   display: none;
+  }
+  
+.slider-active {
+   display: block;
+   animation: fadeIn .85s ease-in-out;
+  }
 
 .slider .caption{
    position:absolute;
-   width: 100%;
-   height: 99%;
+   width: 90%;
+   height: 100%;
    top:0;
    left:-50%;
    color: #fff;
@@ -142,21 +88,57 @@ body{
    transition: left 0.8s ease;
 }
 
+.slider-controllers{
+   position:absolute;
+   top:20vw;
+   width:100%;
+   z-index:800;
+   font-size:4vw;
+   opacity:0.2;
+}
 
+.controllers ul{
+   display:flex;   
+}
 
+.controllers li {
+   margin:0;
+   position:absolute;
+}
 
+.controllers li:nth-child(1){
+   left:10px;
+}
 
+.controllers li:nth-child(2){
+   right:10px;
+}
+
+.controllers li a{
+   color:#fff;
+}
+
+/*----Animation----*/
+@keyframes fadeIn {
+   from {
+    opacity: 0;
+   }
+  
+   to {
+    opacity: 1;
+   }
+  }
 /*-------------Media Queries-----*/
  @media(min-width:992px){
     .slideshow{
        top:0;
        width:91%;
-       float:right;
        height: 75vh;
+       margin-left:9%;
     }
     .slider .caption p{
-      font-size:1.2vw;
- }
+      font-size:1vw;
+   }
    .slider li, ul{
       height: 100%;
    }
@@ -164,6 +146,11 @@ body{
    .slider li img{
       height:100%;
    }
+
+   .slider-controllers{
+      top:50%;
+   }
+
 }
 
 
@@ -233,7 +220,7 @@ body{
    border-bottom: 1px solid #ccc;
 }  
 
-button {
+.description button {
    width: 100%;
    height: 50%;
    font-size: 45%;
@@ -336,7 +323,7 @@ button {
    border-bottom: 1px solid #ccc;
 }  
 
-button {
+.description button {
    font-size: 85%;
    border: 1px solid #DE3435;
    padding: 4px 14px;
