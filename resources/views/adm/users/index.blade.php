@@ -28,23 +28,58 @@
                         <a href="admUser/edit/{{$user->id}}" id="modif">modificar</a> 
                   </td>
                   <td class="tdAdmUser">
-                      <form method="POST" action="admUser/{{$user->id}}">
-                        @method('DELETE')
-                        @csrf
-                        <button type="submit" id="eliminar" class="eliminarAdmUser">eliminar</button>
-                        <!--<a href="" id="eliminar">eliminar</a> -->
-                      </form>
+                  <form method="POST" action="admUser/{{$user->id}}">
+                      @method('DELETE')
+                      @csrf
+                      <button type="submit" id="siElim" class="eliminarAdmUser">eliminar</button>
+                    </form>
+                    <!--    <a href="#" id="eliminar">eliminar</a> -->
                   </td>
                   <td class="tdAdmUser">
                         <a href="admUser/show/{{$user->id}}" id="+info">+info</a>
                   </td>
                 </tr>
+                <!-- MODAL -->
+        <!--        <div id="modalModif" class="modalUser">
+                            <div id="flex" class="flex">
+                              <div class="contenidoModal">
+                                <div class="modal-head flex">
+                                    <h3 class="modalH3Modif">Modificar {{$user->first_name}}</h3>
+                                    <span id="close" class="close">X</span>
+                                </div>
+                                  <div class="modal-body">
+                                    <h4>Seguro que quiere modificar este usuario?</h4>
+                                    <a href="admUser/edit/{{$user->id}}" id="siModif" class="botonModal">Si</a>
+                                    <a href="admUser" id="noModif" class="botonModal">No</a>
+                                  </div>
+                              </div>
+                            </div>
+                </div>-->
                   @endforeach
                   
               </tbody>    
-              
           </div>
-    </div>    
-    
+          
+    </div>        
 </section>
+
+<!-- <div id="modalEliminar" class="modalUser">
+            <div id="flex" class="flex">
+              <div class="contenidoModal">
+                <div class="modal-head flex">
+                    <h3 class="modalH3Modif">Eliminar</h3>
+                    <span id="close2" class="close">X</span>
+                </div>
+                  <div class="modal-body">
+                    <h4>Seguro que quiere eliminar este usuario?</h4>
+                    <form method="POST" action="admUser/{{$user->id}}">
+                      @method('DELETE')
+                      @csrf
+                      <button type="submit" id="siElim" class="botonModalElim">Si</button>
+                      <a href="admUser" id="noElim" class="botonModal">No</a>
+                    </form>
+                  </div>
+              </div>
+            </div>
+</div> -->
 @endsection

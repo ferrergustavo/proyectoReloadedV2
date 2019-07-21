@@ -25,8 +25,7 @@
                     <div class="inputs">
                       <label for="email">Email:</label> <!--NAME="email"--> <br>
                       <input name="email" type="email" id="exampleInputEmail1" aria-describedby="emailHelp" value=" {{old('email')}} " placeholder="Ingrese email ..."required > <br>
-                      <span class="errores">{{$errors->first('email')}}</span>
-                      <small id="emailHelp" class="form-text text-muted"></small>
+                      <span class="errores">{{$errors->first('email')}}</span>       
                     </div>
                     <div class="inputs">
                       <label for="contra">Contraseña:</label> <!--NAME="password"--> <br>
@@ -36,7 +35,7 @@
                     </div>
                     <div class="inputs">
                             <label for="confirmcontra">Confirmar contraseña:</label> <br> <!--NAME="password_confirmation"-->
-                            <input name="password_confirmation" type="password" class="form-control" id="exampleInputPassword1" placeholder=" Confirme la contraseña"required > <br>
+                            <input name="password_confirmation" type="password" id="confirmPassRegistro" placeholder=" Confirme la contraseña"required > <br>
                             <span class="errores"></span>                        
                     </div>
                     <button type="submit">Enviar</button> <br>

@@ -66,6 +66,7 @@ Route::get('/admProduct/edit/{id}','admProductController@edit');
 Route::put('/editProduct/{id}','admProductController@update')->name('editProduct');
 Route::get('/admProduct/newBrand','admProductController@brand');
 Route::post('/admProduct/newBrandEnviar','admProductController@createBrand');
+Route::post('/admProduct/createEnviar','admProductController@store');
 
 // -- Rutas De ADM USER--
 Route::get('/admUser','admUserController@index');

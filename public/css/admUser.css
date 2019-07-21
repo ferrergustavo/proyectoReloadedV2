@@ -52,6 +52,66 @@
     text-transform: lowercase;
     padding: 0;
 }
+
+/* -- MODAL -- */
+.flex{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.botonModal{
+    text-decoration: none;
+    font-size: 20px;
+    display: inline-block;
+    padding: 10px;
+    width: 170px;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: black;
+}
+.botonModal:hover{
+    text-decoration: none;
+    background: black;
+    color: #c7c7c7;
+}
+.modalUser{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.contenidoModal{
+    position: relative;
+    background-color: white;
+    margin: auto;
+    width: 30%;
+    box-shadow: 0 0 6px 0 rgba(0,0,0, 0.5);
+    color: black;
+    animation-name: modalModif;
+    animation-duration: 1s;
+}
+@keyframes modalModif{
+    from{top:-300px; opacity: 0;}
+    to{top:0;opacity:1;}
+    
+}
+.close{
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+}
+.modal-head{
+    background: gray;
+    padding: 2px;
+}
+
 @media (max-width:532px){
     .sectionAdmUser{
         width: 95vw;

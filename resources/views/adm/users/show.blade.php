@@ -39,9 +39,6 @@
                         <button type="submit" id="eliminar" class="btnAdmUserShow">eliminar</button>
                         <!--<a href="" id="eliminar">eliminar</a> -->
                       </form>
-
-                        <button type="submit" class="btnAdmUserShow" href="admUser">Index Users</button>
-                    <!--<a href="../" class="aAdmUserShow">Index Users</a>-->
                 </article>
             </section> 
         </article>
