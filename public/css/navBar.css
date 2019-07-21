@@ -9,11 +9,17 @@
 .botonLineas{
     background-color: black;
     width: 33px;
-    margin-top: 18
-    px;
    
 }
-
+<<<<<<< HEAD
+@font-face{
+    font-family:'neutra-demialt';
+    src: url('../fonts/NEUTRATEXT-DEMIALT.OTF') format('opentype');
+=======
+.main_{
+    width:100%;
+>>>>>>> 4b424145e91cb5a957a33519e54a9b49458231b2
+}
 .container_navBar{
     position: fixed;
     top: 0;
@@ -83,6 +89,15 @@
     top:10%;
 }
 
+.container_verticalIcons button{
+    background-color:#000;
+    border:none;
+}
+
+.container_verticalIcon button:focus{
+    outline: none;
+}
+
 .shop_Icon{
     width:100%;
     height: 15%;
@@ -92,6 +107,10 @@
     display:flex;
     align-items: center;
     margin:0 auto;
+}
+
+.shop_Icon button:focus{
+    outline:none;
 }
 
 .shop_Icon img{
@@ -191,3 +210,189 @@
 }
 
 }
+
+
+/* ---- REGISTRO -- */
+.registroMenu{
+    height: 100vh;
+    width: 40%; /*40*/
+    position: fixed;
+    display: none;
+    z-index: 999;
+    margin-left: 9%;
+    background-color: rgba(19, 19, 19, 0.9);
+    text-align: center;
+    animation-name: registroSlider;
+    animation-duration: 1s;
+    overflow: hidden;
+}
+@keyframes registroSlider{
+    from{left: -330px; opacity: 0;}
+    to{left: 0px; opacity: 1;}
+}
+.inputs input{
+    width: 40%;
+    border: solid;
+    border-color: #8400ff;
+    border-bottom-width: 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: none;
+    margin-top: 0.5em;
+    height: 2em;
+    color: #c7c7c7;
+}
+.inputs input:focus{
+    border-color: white;
+}
+.inputs{
+    margin-top: 0.7em;
+}
+.inputs input::placeholder{
+    color: gray;
+    font-size: 1.1em;
+    text-align: center;
+}
+.inputs label{
+    font-size: 1.2em;
+    
+}
+.smalls p{
+    text-align: center;
+    font-size: 0.87em;
+}
+.olvidepass a{
+    margin-right: 25%;
+    color: #c7c7c7;
+    text-decoration: none;
+}
+.olvidepass a:hover{
+    font-size: 1.1em;
+}
+.recordar{
+    margin-right: 33%;
+}
+.errores{
+    color: red;
+}
+.EnviarForm{
+    width: 20%;
+    margin-top: 2em;
+    margin-right: 40%;  
+    background-color: #8400ff;
+    border-color: #8400ff;
+}
+.registroMenuContent{
+    margin-top: 0%;
+}
+.cuenta{
+    margin-left: 18%;
+    margin-right: 17%;
+    margin-top: 0.5em;
+}
+.cuenta a{
+    text-decoration: underline;
+    color: #c7c7c7;
+    font-size: 0.9em;
+}
+.h2Registro{
+    font-family:'neutra-bookalt';
+    font-weight: bolder;
+    margin-right:10px;
+    margin-bottom: 1em; 
+}
+.imgX img{
+    width: 20px;
+    height: 20px;
+    margin-left: 85%;
+    margin-top: 20px;
+}
+.imgX img:hover{
+    opacity: 0.5;
+}
+.shop_display{
+    width:0;
+    background-color:rgba(19,19,19,0.9);
+    height: 100vh;
+    position:fixed;
+    z-index:1000;
+    transition:0.5s;
+}
+.shop_display .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+}
+.categories{
+    font-size:1.8vw;
+    color:black;
+    position:absolute;
+    top:20%;
+    width:78%;
+    right:0px;
+}
+
+.categories li{
+    width:100%;
+    list-style-type: none;
+    overflow:hidden;
+    height: 26%;
+    border-style:solid;
+    border-color:rgb(15, 0, 19);
+}
+
+.categories li:hover{
+    box-shadow: inset 0px 0px 80px 27px rgba(237,216,237,1);
+
+}
+.categories img{
+    width:100%;
+    height:140%;
+}
+
+.categories li a{
+    position:absolute;
+    padding:3%;
+}
+ .categories .teclado__ a{
+    top:0;
+    text-decoration:none;
+    color:white;
+ }
+ .categories .mouse__ a{
+    top:52%;
+    color:white;
+    text-decoration:none;
+
+ }
+ .categories .auriculares__ a{
+    top:26%;
+    color:white;
+    text-decoration:none;
+ }
+
+ .categories .teclado__ a:hover{
+    color:rgba(255, 255, 255, 0.534);
+ }
+ .categories .mouse__ a:hover{
+    color:rgba(255, 255, 255, 0.534);
+ }
+ .categories .auriculares__ a:hover{
+    color:rgba(255, 255, 255, 0.534);
+ }
+
+
+
+
+
+

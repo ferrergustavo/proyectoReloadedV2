@@ -11,7 +11,7 @@ use App\Cart;
 class Product extends Model
 {
     protected $fillable = [
-        'name_p','description','price','stock','img_p','category_id','brand_id','new',
+        'name_p','description','price','stock','img_p','img2','img3','img4','category_id','brand_id','new',
     ];
 
     public function cart(){

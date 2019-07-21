@@ -1,27 +1,164 @@
-//---- Al iniciar la pagina----//
+window.addEventListener('load',cargar)
 
-$('.slider li').hide();//Con esto ocultamos todos los slides
-$('.slider li:first').show();// Hacemos que el primer slide se muestre
+function cargar(){
 
-//-----Funciones a ejecutar----//
-$('.pagination li ').click(pagination);//Esto significa que al hacer click a cualquier elemento del li dentro de la paginacion hara la funcion pagination
+    //---- Slider----//
+    
+    const slider = document.querySelector('.slider');
+
+    console.log(slider);
+
+    const slides = document.querySelector('.slider_');
+
+    console.log(slides);
+
+    const sliderLeft = document.querySelector('.control-left');
+    
+    console.log(sliderLeft);
+
+    const sliderRight = document.querySelector('.control-right');
+
+    console.log(sliderRight);
 
 
+//-------- Funciones Registro ------//
+let bodyRegistro=document.querySelector('#registroMenu');
+let botonRegistro=document.querySelector('#profile');
+let botonCerrarRegistro=document.querySelector('#imgX')
+let tengoCuenta=document.querySelector('#tenesCuenta')
 
-//----Funciones----//
+botonRegistro.addEventListener('click',abrirRegistro);
+botonCerrarRegistro.addEventListener('click',cerrarRegistro);
+tengoCuenta.addEventListener('click',yaTengoCuenta);
+    function slideLeft() {
+        
+    let activeSlide = document.querySelector('.slider-active'); 
 
-function pagination(){
-    var paginationPos = $(this).index() + 1;//Esto devulve el valor de la posicion dentro del elemento
-    $('.slider li').hide();
-    $('.slider li:nth-child('+paginationPos+')').fadeIn(300);//Ocultamos los elementos de los slides y nada mas hacemos que aparezca el slide de la posicion que se clickeo
+    let previousSlide = activeSlide.previousElementSibling;
+
+    if (previousSlide !== null){
+        activeSlide.classList.add('slider-hidden');
+
+function cerrarRegistro(){
+    bodyRegistro.style.display='none';
 }
 
+function yaTengoCuenta(){
+    bodyLogin.style.display='block'; 
+    bodyRegistro.style.display='none';
+}
+//-------- Funciones LogIn -------//
+let bodyLogin=document.querySelector('#loginMenu')
+let nuevo=document.querySelector('#sosNuevo');
+let imgXL=document.querySelector('#imgXL');
 
+nuevo.addEventListener('click',sosNuevo);
+imgXL.addEventListener('click',cerrarLogin);
 
+function abrirRegistro(){
+    bodyLogin.style.display='block';
+}
+function sosNuevo(){
+    bodyLogin.style.display='none'; 
+    bodyRegistro.style.display='block';
+}
+function cerrarLogin(){
+    bodyLogin.style.display='none';
+}
+        activeSlide.classList.remove('slider-active');
 
+        previousSlide.classList.remove('slider-hidden');
 
+        previousSlide.classList.add('slider-active');
+    }else{
 
+        activeSlide.classList.add('slider-hidden');
 
+        activeSlide.classList.remove('slider-active');
 
+        slider.lastElementChild.classList.remove('slider-hidden');
 
+        slider.lastElementChild.classList.add('slider-active');
+    }
+}
 
+    function slideRight() {
+   
+    let activeSlide = document.querySelector('.slider-active');
+   
+    let nextSlide = activeSlide.nextElementSibling;
+   
+    if (nextSlide !== null) {
+     activeSlide.classList.add('slider-hidden');
+   
+     activeSlide.classList.remove('slider-active');
+   
+     nextSlide.classList.remove('slider-hidden');
+   
+     nextSlide.classList.add('slider-active');
+    } else {
+     
+     activeSlide.classList.add('slider-hidden');
+   
+     activeSlide.classList.remove('slider-active');
+   
+     slider.firstElementChild.classList.remove('slider-hidden');
+   
+     slider.firstElementChild.classList.add('slider-active');
+    }
+   };
+
+    sliderLeft.addEventListener('click', slideLeft);
+
+    sliderRight.addEventListener('click', slideRight);
+
+   
+
+   //-------------- Con Botones del teclado--------------//
+
+   document.onkeyup = function(evento){
+    if(event.keyCode==39){
+        slideRight();
+    }else if(event.keyCode==37){
+        slideLeft();
+    }
+    };
+
+    //-------------------------Boton Shop-----------------------------------//
+
+        let show_sidebar = document.querySelector('.shop_Icon');
+        let mySidebar = document.querySelector('.shop_display')
+        let close_sidebar = document.querySelector('.closebtn');
+        let container = document.querySelector('.slideshow');
+
+        show_sidebar.onclick = function(){
+            mySidebar.style.width = "40%";
+            container.style.opacity = "0.5";
+        }
+
+        close_sidebar.onclick = function(){
+            mySidebar.style.width = "0";
+            container.style.opacity = "1";
+        }
+
+    }
+
+  //------- Accordion Navbar-------//
+
+    let accordions = document.getElementsByClassName('accordion_button');
+    console.log(accordions);
+    for(let i = 0; i < accordions.length;i++){
+        accordions[i].onclick = function(){
+            let content = this.nextElementSibling;
+            console.log(content);
+
+        if(content.style.maxHeight){
+            content.style.maxHeight = null ;
+        }else{
+            content.style.maxHeight = 200 +"px";
+        }
+        }
+
+    }
+
+    
