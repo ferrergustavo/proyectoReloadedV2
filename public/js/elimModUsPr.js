@@ -1,42 +1,32 @@
+let modalModif=document.querySelector('#modalModif');
+let modalElim=document.querySelector('#modalEliminar')
+let flex=document.querySelector('#flex');
+let modif=document.querySelector('#modif');
+let elim=document.querySelector('#eliminar')
+let close=document.querySelector('#close');
+let close2=document.querySelector('#close2');
 
-window.onload = function(){
-        let eliminar=document.querySelector('#eliminar');
-        let modificar=document.querySelector('#modif');
-        eliminar.onclick=function(){
-            Swal.fire({
-                title: 'Estas seguro de eliminar este usuario?',
-                text: "Una vez borrado no se puede recuperar!",
-                type: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Si,quiero eliminarlo!'
-                }).then((result) => {
-                if (result.value) {
-                    Swal.fire(
-                    'Eliminado!',
-                    'success'
-                    )
-                }
-                })
-        }
-            modificar.onclick=function(){
-             Swal.fire({
-                title: 'Seguro que queres modificar este usuario?',
-                type: 'question',
-                showCancelButton: true,
-                confirmButtonColor: 'green',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Modificar'
-                }).then((result) => {
-                if (result.value) {
-                    Swal.fire(
-                    'Modificando'
-                    )
-                }
-                })
-                Swal.clickConfirm({
-                   // location.href='/admUser/editUser/{{$user->id}}';
-                })
-        }
+
+
+modif.addEventListener('click',modificar);
+close.addEventListener('click',cerrar);
+elim.addEventListener('click',eliminar);
+close2.addEventListener('click',cerrar2);
+
+
+
+function modificar(){
+    modalModif.style.display='block';
+
+}
+
+function cerrar(){
+    modalModif.style.display='none';
+}
+
+function eliminar(){
+    modalElim.style.display='block';
+}
+function cerrar2(){
+    modalElim.style.display='none';
 }
