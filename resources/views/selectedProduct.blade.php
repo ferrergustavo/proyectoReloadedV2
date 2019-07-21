@@ -10,7 +10,6 @@
    
     </section>
     <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
-    <script src='{{asset('js/product_views.js')}}'></script>
     </body>
 @endsection
 @yield('partials_pau.footer') 
