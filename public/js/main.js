@@ -17,10 +17,43 @@ function pagination(){
 }
 
 
+//-------- Funciones Registro ------//
+let bodyRegistro=document.querySelector('#registroMenu');
+let botonRegistro=document.querySelector('#profile');
+let botonCerrarRegistro=document.querySelector('#imgX')
+let tengoCuenta=document.querySelector('#tenesCuenta')
+
+botonRegistro.addEventListener('click',abrirRegistro);
+botonCerrarRegistro.addEventListener('click',cerrarRegistro);
+tengoCuenta.addEventListener('click',yaTengoCuenta);
 
 
+function cerrarRegistro(){
+    bodyRegistro.style.display='none';
+}
 
+function yaTengoCuenta(){
+    bodyLogin.style.display='block'; 
+    bodyRegistro.style.display='none';
+}
+//-------- Funciones LogIn -------//
+let bodyLogin=document.querySelector('#loginMenu')
+let nuevo=document.querySelector('#sosNuevo');
+let imgXL=document.querySelector('#imgXL');
 
+nuevo.addEventListener('click',sosNuevo);
+imgXL.addEventListener('click',cerrarLogin);
+
+function abrirRegistro(){
+    bodyLogin.style.display='block';
+}
+function sosNuevo(){
+    bodyLogin.style.display='none'; 
+    bodyRegistro.style.display='block';
+}
+function cerrarLogin(){
+    bodyLogin.style.display='none';
+}
 
 
 

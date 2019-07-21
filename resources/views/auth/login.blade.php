@@ -5,7 +5,7 @@
             <article class="article1">
             <h1>Log In</h1> <hr>
             <form method="POST" action="">
-            @csrf
+              @csrf
                     <div class="inputs">
                       <label for="email">Email:</label> <!--NAME="email"--> <br>
                       <input name="email" type="email" id="exampleInputEmail1" aria-describedby="emailHelp" value="" placeholder="Ingrese email..." required > <br>

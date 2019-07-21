@@ -20,9 +20,12 @@ class CreateProductsTable extends Migration
             $table->integer('price');
             $table->integer('stock');
             $table->longtext('img_p');
+            $table->longtext('img2')->nullable();
+            $table->longtext('img3')->nullable();
+            $table->longtext('img4')->nullable();
             $table->integer('category_id');
             $table->integer('brand_id');
-            $table->boolean('new');
+            $table->boolean('new')->nullable();
             $table->timestamps();
         });
     }

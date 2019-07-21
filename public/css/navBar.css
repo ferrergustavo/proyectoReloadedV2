@@ -13,7 +13,10 @@
     px;
    
 }
-
+@font-face{
+    font-family:'neutra-demialt';
+    src: url('../fonts/NEUTRATEXT-DEMIALT.OTF') format('opentype');
+}
 .container_navBar{
     position: fixed;
     top: 0;
@@ -190,4 +193,105 @@
     position:relative;
 }
 
+}
+
+
+/* ---- REGISTRO -- */
+.registroMenu{
+    height: 100vh;
+    width: 40%; /*40*/
+    position: fixed;
+    display: none;
+    z-index: 999;
+    margin-left: 9%;
+    background-color: rgba(19, 19, 19, 0.9);
+    text-align: center;
+    animation-name: registroSlider;
+    animation-duration: 1s;
+    overflow: hidden;
+}
+@keyframes registroSlider{
+    from{left: -330px; opacity: 0;}
+    to{left: 0px; opacity: 1;}
+}
+.inputs input{
+    width: 40%;
+    border: solid;
+    border-color: #8400ff;
+    border-bottom-width: 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: none;
+    margin-top: 0.5em;
+    height: 2em;
+    color: #c7c7c7;
+}
+.inputs input:focus{
+    border-color: white;
+}
+.inputs{
+    margin-top: 0.7em;
+}
+.inputs input::placeholder{
+    color: gray;
+    font-size: 1.1em;
+    text-align: center;
+}
+.inputs label{
+    font-size: 1.2em;
+    
+}
+.smalls p{
+    text-align: center;
+    font-size: 0.87em;
+}
+.olvidepass a{
+    margin-right: 25%;
+    color: #c7c7c7;
+    text-decoration: none;
+}
+.olvidepass a:hover{
+    font-size: 1.1em;
+}
+.recordar{
+    margin-right: 33%;
+}
+.errores{
+    color: red;
+}
+.EnviarForm{
+    width: 20%;
+    margin-top: 2em;
+    margin-right: 40%;  
+    background-color: #8400ff;
+    border-color: #8400ff;
+}
+.registroMenuContent{
+    margin-top: 0%;
+}
+.cuenta{
+    margin-left: 18%;
+    margin-right: 17%;
+    margin-top: 0.5em;
+}
+.cuenta a{
+    text-decoration: underline;
+    color: #c7c7c7;
+    font-size: 0.9em;
+}
+.h2Registro{
+    font-family:'neutra-bookalt';
+    font-weight: bolder;
+    margin-right:10px;
+    margin-bottom: 1em; 
+}
+.imgX img{
+    width: 20px;
+    height: 20px;
+    margin-left: 85%;
+    margin-top: 20px;
+}
+.imgX img:hover{
+    opacity: 0.5;
 }

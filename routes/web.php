@@ -38,14 +38,14 @@ Route::get('/productsInfo','ProductsController@productInfo');
 
 
 
-
-
-
-
 Route::get('/searchResult','SearchController@show');
 Route::get('shoppingCart','CartController@show');
 // --Rutas De Adm --
-Route::get('/adm','admProductController@adm');
+Route::group(['prefix' => 'admin', 'middleware' => ['auth','profile']], function () {
+    Route::resource('/adm', 'adminProductController');
+    Route::resource('/adm', 'adminUserController');
+});
+Route::get('/adm','admProductController@adm')->middleware('auth','profile:9797');
 Route::post('/adm','admProductController@adm');
 // -- Rutas De ADM Products -- 
 Route::get('/admProduct','admProductController@index');

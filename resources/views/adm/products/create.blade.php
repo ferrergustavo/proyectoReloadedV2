@@ -51,15 +51,17 @@
                         </select>
                         <span class="errores">{{$errors->first('brand_id')}}</span>
                     </div> <br>
+                    <!-- --- IMAGEN PRINCIPAL -->
                     <div class="inputsAdmProductCreate">
                          Imagen del producto: <input type="file" name="img_p" required>
                          <span class="errores">{{$errors->first('img_p')}}</span>
                     </div><br>
                     <div class="inputsAdmProductCreate">
                             <label for="name_p">Nombre de la imagen:</label> 
-                            <input name="nameImg" type="text" id="nameImg" value="" placeholder="Ingrese nombre con el cual quiere guardar la imagen" required  ><br>
+                            <input name="nameImg_p" type="text" id="nameImg_p" value="" placeholder="Ingrese nombre con el cual quiere guardar la imagen" required  ><br>
                             <span class="errores">{{$errors->first('nameImg')}} </span>
                     </div>
+                    <!-- --- ---- -->
                     <div class="botonAdmProductCreate">            
                         <button class="btnAdmProductCreate">Crear</button>
                     </div>
