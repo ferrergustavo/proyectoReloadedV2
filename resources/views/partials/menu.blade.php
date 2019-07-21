@@ -14,7 +14,7 @@
         <div class="logo_Vertical"><a href="index.php"><img src="img/logo.svg" alt=""></a></div>
         <div class="container_verticalIcons">
             <div class="shop_Icon">
-            <a  class="nav_Icons" href="products"><img src="img/shop_icon.svg" alt="shop_icon"> </a>
+            <button  class="nav_Icons"><img src="img/shop_icon.svg" alt="shop_icon"> </button>
             </div> 
             <div class="cart_Icon">
             <a  class="nav_Icons" href="shoppingCart"><img src="img/carrito.svg" alt="cart_icon"> </a>
@@ -35,3 +35,22 @@
         </div>
 </div>
 </nav>
+
+<div class="shop_display">
+<a href="javascript:void(0)" class="closebtn">X</a>
+<ul class="categories">
+    <li class="teclado__">
+    <img src="img/teclado-navbar.jpg" alt="">
+    <a>Teclados</a>
+    </li>
+    <li class=" auriculares__">
+    <img src="img/auricular-navbar.jpg" alt="">
+    <a>Auriculares</a>
+    </li>
+    <li class="mouse__">
+    <img src="img/mouse-navbar.jpg" alt="">
+    <a>Mouse</a>
+    </li>
+
+</ul>    
+</div>
