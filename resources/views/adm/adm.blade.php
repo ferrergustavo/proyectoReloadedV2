@@ -1,7 +1,6 @@
 @extends('layouts.admL')
 
 @section('Adm')
-    
     <div class="containerAdm">
         <section class="sAd">
             <article class="aAd">

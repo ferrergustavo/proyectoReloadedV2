@@ -71,6 +71,9 @@ class admProductController extends Controller
         ]);
         
         $nameImg_p = $request->input("nameImg_p");
+        $nameImg2=$request->input('nameImg2');
+        $nameImg3=$request->input('nameImg3');
+        $nameImg4=$request->input('nameImg4');
 
         $path = $request->file('img_p');
         if($path!=null){

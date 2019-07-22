@@ -53,7 +53,8 @@
                     </div> <br>
                     <!-- --- IMAGEN PRINCIPAL -->
                     <div class="inputsAdmProductCreate">
-                         Imagen del producto: <input type="file" name="img_p" required>
+                       <h4>  Imagen del producto:</h4>
+                          <input type="file" name="img_p" required>
                          <span class="errores">{{$errors->first('img_p')}}</span>
                     </div><br>
                     <div class="inputsAdmProductCreate">
@@ -62,6 +63,42 @@
                             <span class="errores">{{$errors->first('nameImg')}} </span>
                     </div>
                     <!-- --- ---- -->
+                     <!--  IMAGEN 2 -->
+                     <div class="inputsEditUser">
+                        <h4> Imagen del producto 2: </h4> 
+                         <input type="file" name="img2" >
+                         <span class="errores">{{$errors->first('img2')}}</span>
+                    </div><br>
+                    <div class="inputsEditUser">
+                            <label for="nameImg2">Nombre de la imagen 2:</label> 
+                            <input name="nameImg2" type="text" id="nameImg2" value="" placeholder="Ingrese nombre con el cual quiere guardar la imagen" ><br>
+                            <span class="errores">{{$errors->first('nameImg2')}} </span>
+                    </div>
+                    <!-- ---- ---- -->
+                    <!--  IMAGEN 3 -->
+                    <div class="inputsEditUser">
+                        <h4> Imagen del producto 3: </h4>
+                         <input type="file" name="img3">
+                         <span class="errores">{{$errors->first('img3')}}</span>
+                    </div><br>
+                    <div class="inputsEditUser">
+                            <label for="name3">Nombre de la imagen 3:</label> 
+                            <input name="nameImg3" type="text" id="nameImg3" value="" placeholder="Ingrese nombre con el cual quiere guardar la imagen" ><br>
+                            <span class="errores">{{$errors->first('nameImg3')}} </span>
+                    </div>
+                    <!-- ---- ---- -->
+                    <!--  IMAGEN 4 -->
+                    <div class="inputsEditUser">
+                        <h4> Imagen del producto 4: </h4>
+                         <input type="file" name="img4">
+                         <span class="errores">{{$errors->first('img4')}}</span>
+                    </div><br>
+                    <div class="inputsEditUser">
+                            <label for="name4">Nombre de la imagen 4:</label> 
+                            <input name="nameImg4" type="text" id="nameImg4" value="" placeholder="Ingrese nombre con el cual quiere guardar la imagen" ><br>
+                            <span class="errores">{{$errors->first('nameImg4')}} </span>
+                    </div>
+                    <!-- ---- ---- -->
                     <div class="botonAdmProductCreate">            
                         <button class="btnAdmProductCreate">Crear</button>
                     </div>

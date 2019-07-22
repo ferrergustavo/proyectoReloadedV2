@@ -16,7 +16,7 @@ class CheckRole
     public function handle($request, Closure $next)
     {
         if ($request->user()->profile != 9797) {
-            return redirect()->route('login');
+            return redirect('/');
         }
         return $next($request);
     }
