@@ -16,7 +16,7 @@
                       <label for="contra">Contraseña:</label> <!--NAME="password"--> <br>
                       <input name="password" type="password" id="exampleInputPassword1" placeholder="Contraseña"required > <br>
                       <span class="errores">{{$errors->first('password')}} </span> 
-                      <small class="smalls"><p> La contraseña debe tener al menos 6 caracteres.</p></small> <br>
+                      <small class="smalls"><p> La contraseña debe tener al menos 8 caracteres.</p></small> <br>
                       <small id="olvidecontraseña" class="olvidepass"><a href="password/reset">Olvidaste tu contraseña?</a> </small>
                     </div> <br>
                     <div class="recordar"> 

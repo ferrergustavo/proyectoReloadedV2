@@ -31,7 +31,7 @@
                       <label for="contra">Contraseña:</label> <!--NAME="password"--> <br>
                       <input name="password" type="password" id="exampleInputPassword1" placeholder="Contraseña" required >  <br>
                       <span class="errores">{{$errors->first('password')}}</span>
-                      <small id="olvidecontraseña" class="smalls"><p> La contraseña debe tener al menos 6 caracteres.</p></small>
+                      <small id="olvidecontraseña" class="smalls"><p> La contraseña debe tener al menos 8 caracteres.</p></small>
                     </div>
                     <div class="inputs">
                             <label for="confirmcontra">Confirmar contraseña:</label> <br> <!--NAME="password_confirmation"-->

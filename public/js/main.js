@@ -166,4 +166,87 @@ function sosNuevo(){
 function cerrarLogin(){
     bodyLogin.style.display='none';
 }
-    
+
+// ----- VALIDACION REGISTRO JS ----- //
+window.onload = function(){
+    let form=document.querySelector('#form_Register');
+    form.elements.first_name.focus();
+    console.log(form.elements);
+     form.onsubmit = function(e) {
+         if (!validaciones()) {
+             e.preventDefault();
+         }else{
+             form.submit();
+         }
+     }
+     function validaciones(){
+         let {first_name,last_name,email,password,confirmPassRegistro}=form.elements;
+         if (!validarFirst_name(first_name))return false;
+         if (!validarLast_name(last_name)) return false;
+         if (!validarEmail(email)) return false;
+         if (!validarPassword(password))return false;
+         if (!validarConfirmPassRegistro(confirmPassRegistro,password))return false;
+         return true;
+     }
+     function validarFirst_name(first_name){
+         first_name.classList.add('is-invalid');
+         let errorFirst_name = document.querySelector('#errorFirst_name');
+         let reFirst_name=/^[a-zA-Z]{2,16}$/;
+         if(!reFirst_name.test(first_name.value)){
+             errorFirst_name.innerHTML="<strong>Nombre Invalido</strong>";
+             return false;
+         }else{
+             errorFirst_name.innerHTML="";
+             first_name.classList.remove('is-invalid');
+             first_name.classList.add('is-valid');
+             form.last_name.focus();
+             return true;
+         }
+     }
+   
+     function validarLast_name(last_name){
+        last_name.classList.add('is-invalid');
+        let errorlast_name = document.querySelector('#errorLast_name');
+        let reLast_name=/^[a-zA-Z]{2,16}$/;
+        if(!reLast_name.test(last_name.value)){
+            errorlast_name.innerHTML="<strong>Apellido Invalido</strong>";
+            return false;
+        }else{
+            errorLast_name.innerHTML="";
+            last_name.classList.remove('is-invalid');
+            last_name.classList.add('is-valid');
+            form.email.focus();
+            return true;
+        }
+    }
+
+     function validarEmail(email){
+         email.classList.add('is-invalid');
+         let errorEmail = document.querySelector('#errorEmail');
+         let reEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
+         if (!reEmail.test(email.value)) {
+             errorEmail.innerHTML= "<strong>email Invalido</strong>";
+             return false;
+         }else{
+             errorEmail.innerHTML="";
+             email.classList.remove('is-invalid');
+             email.classList.add('is-valid');
+             form.password.focus();
+             return true;}
+     }
+     function validarPassword(password){
+         password.classList.add('is-valid');
+         let errorPassword=document.querySelector('#errorPassword');
+         let rePassword=/^[a-zA-Z0-9-_]{8,16}$/;
+         if (!rePassword.test(password.value)) {
+             errorPassword.innerHTML="<strong>Contraseña Invalido</strong>"
+             return false;
+         }else{
+             errorPassword.innerHTML="";
+             errorPassword.classList.remove('is-invalid');
+             errorPassword.classList.add('is-valid');
+             form.confirmPassRegistro.focus();
+             return true;
+         }
+     }
+ }

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href='{{asset('css/navBar.css')}}'>
     <link rel="stylesheet" href='{{asset('css/footer.css')}}'>
     <link rel="stylesheet" href='{{asset('css/editProfile.css')}}'>
+    <link rel="stylesheet" href='{{asset('css/contraRecuperada.css')}}'>
     <!-- CSS ADM -->
     <link rel="stylesheet" href='{{asset('css/adm.css')}}'>
     <!-- CSS ADM User -->

@@ -23,13 +23,20 @@
             <div class="search_Icon">
             <a  class="nav_Icons" href="searchResult"><img src="img/search.svg" alt="search_icon"> </a>
             </div>
+            @guest
             <div class="profile_Icon">
             <a id="profile" class="nav_Icons" href="#"><img src="img/profile2.svg" alt="profile_icon"> </a>
             </div>
-            <div class='admin_Icon'>
-               <a  class='nav_Icons' href='adm'><img src='img/admin.svg' alt='admin_icon'> </a>
+            @else
+            <div>
+            <p>{{Auth::User()->first_name}}</p>
             </div>
-       
+            @if (Auth::User()->profile==9797)
+              <div class='admin_Icon'>
+                <a  class='nav_Icons' href='adm'><img src='img/admin.svg' alt='admin_icon'> </a>
+              </div>
+            @endif
+            @endguest
         <div class="help_Icon">
             <a  class="nav_Icons" href="help.php"><img src="img/help.svg" alt="help_icon"> </a>
         </div>
@@ -65,32 +72,37 @@
             
         </div>
         <div id="bodyRegister" class="bodyRegister">
-        <form method="POST" action="{{route('register')}}">
+        <form id="form_Register" method="POST" action="{{route('register')}}">
                     @csrf
                     <div class="inputs">
                             <label for="nombre">Nombre:</label> <br>
-                            <input name="first_name" type="text" id="nombre" value=" {{old('fist_name')}} " placeholder="Ingrese su nombre ..." required  > <br>
+                            <input name="first_name" type="text" id="first_name" value=" {{old('fist_name')}} " placeholder="Ingrese su nombre ..." required  > <br>
+                            <span id="errorFirst_name"></span>
                             <span class="errores">{{$errors->first('first_name')}} </span>
                     </div>
                     <div class="inputs">
                             <label for="nombre">Apellido:</label> <br>
-                            <input name="last_name" type="text" id="apellido" value=" {{old('last_name')}} " placeholder="Ingrese su apellido ..." required  > <br>
+                            <input name="last_name" type="text" id="last_name" value=" {{old('last_name')}} " placeholder="Ingrese su apellido ..." required  > <br>
+                            <span id="errorLast_name"></span>
                             <span class="errores">{{$errors->first('last_name')}}</span>
                     </div>
                     <div class="inputs">
                       <label for="email">Email:</label> <!--NAME="email"--> <br>
-                      <input name="email" type="email" id="exampleInputEmail1" aria-describedby="emailHelp" value=" {{old('email')}} " placeholder="Ingrese email ..."required > <br>
+                      <input name="email" type="email" id="email" aria-describedby="emailHelp" value=" {{old('email')}} " placeholder="Ingrese email ..."required > <br>
+                      <span id="errorEmail"></span>
                       <span class="errores">{{$errors->first('email')}}</span>       
                     </div>
                     <div class="inputs">
                       <label for="contra">Contraseña:</label> <!--NAME="password"--> <br>
-                      <input name="password" type="password" id="exampleInputPassword1" placeholder="Contraseña" required >  <br>
+                      <input name="password" type="password" id="password" placeholder="Contraseña" required >  <br>
+                      <span id="errorPassword"></span>
                       <span class="errores">{{$errors->first('password')}}</span>
                       <small id="olvidecontraseña" class="smalls"><p> La contraseña debe tener al menos 6 caracteres.</p></small>
                     </div>
                     <div class="inputs">
                             <label for="confirmcontra">Confirmar contraseña:</label> <br> <!--NAME="password_confirmation"-->
                             <input name="password_confirmation" type="password" id="confirmPassRegistro" placeholder=" Confirme la contraseña"required > <br>
+                            <span id="errorConfirmPassRegistro"></span>
                             <span class="errores"></span>                        
                     </div>
                     <button type="submit" class="EnviarForm">Enviar</button>
