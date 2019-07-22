@@ -142,8 +142,10 @@
 <div class="search_display">
 <span id="imgXP" class="imgX"><img src='img/X.svg' alt=""></span>
 <form action="/search" method="get">
-<input type="search" placeholder="Hermano querido aca puedes realizar tu busqueda" name="busqueda">
-<button type="submit" class="seach_button"><i class="fas fa-search"></i></button>
+<div clas>
+  <input type="search" placeholder="Hermano querido aca puedes realizar tu busqueda" name="busqueda">
+  <button type="submit" class="seach_button"><i class="fas fa-search"></i></button>
+</div>
 </form> 
 <div class="search_container">
 <ul>
