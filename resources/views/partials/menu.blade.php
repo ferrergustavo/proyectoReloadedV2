@@ -21,7 +21,7 @@
             <a  class="nav_Icons" href="shoppingCart"><img src="img/carrito.svg" alt="cart_icon"> </a>
             </div>
             <div class="search_Icon">
-            <a  class="nav_Icons" href="searchResult"><img src="img/search.svg" alt="search_icon"> </a>
+            <a  class="nav_Icons" id="search" href="#"><img src="img/search.svg" alt="search_icon"> </a>
             </div>
             @guest
             <div class="profile_Icon">
@@ -44,8 +44,9 @@
 </div>
 </nav>
 
+<!------Shop Display ----->
 <div class="shop_display">
-<a href="javascript:void(0)" class="closebtn">X</a>
+<span id="imgXY" class="imgX"><img src='img/X.svg' alt=""></span> 
 <ul class="categories">
     <li class="teclado__">
     <img src="img/teclado-navbar.jpg" alt="">
@@ -146,4 +147,27 @@
                   </form>
         </div>
   </div>
+</div>
+
+
+<!----Busqueda------>
+<div class="search_display">
+<span id="imgXP" class="imgX"><img src='img/X.svg' alt=""></span>
+<form action="/search" method="get">
+<div clas>
+  <input type="search" placeholder="Hermano querido aca puedes realizar tu busqueda" name="busqueda">
+  <button type="submit" class="seach_button"><i class="fas fa-search"></i></button>
+</div>
+</form> 
+<div class="search_container">
+<ul>
+<li class="search_brands"><a href=""><img src="img/auricular-navbar.jpg" alt=""><p>Razer</p></a></li>
+<li class="search_brands"><a href=""><img src="img/auricular-navbar.jpg" alt=""><p>Razer</p></a></li>
+<li class="search_brands"><a href=""><img src="img/auricular-navbar.jpg" alt=""><p>Razer</p></a></li>
+<li class="search_brands"><a href=""><img src="img/auricular-navbar.jpg" alt=""><p class="search_a">Razer</p></a></li>
+<li class="search_brands"><a href=""><img src="img/auricular-navbar.jpg" alt=""><p class="search_a">Razer</p></a></li>
+<li class="search_brands"><a href=""><img src="img/auricular-navbar.jpg" alt=""><p class="search_a">Razer</p></a></li>
+</ul>
+</div>
+
 </div>

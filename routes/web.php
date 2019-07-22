@@ -28,8 +28,8 @@ Route::get('/editprofile/{id}','EditProfileController@edit');
 Route::put('/update/{id}', 'EditProfileController@update')->name('update');
 
 
-
-
+//Search
+Route::get('/search', 'SearchController@search');
 
 //
 
