@@ -21,51 +21,15 @@ function cargar(){
     console.log(sliderRight);
 
 
-//-------- Funciones Registro ------//
-let bodyRegistro=document.querySelector('#registroMenu');
-let botonRegistro=document.querySelector('#profile');
-let botonCerrarRegistro=document.querySelector('#imgX')
-let tengoCuenta=document.querySelector('#tenesCuenta')
-
-botonRegistro.addEventListener('click',abrirRegistro);
-botonCerrarRegistro.addEventListener('click',cerrarRegistro);
-tengoCuenta.addEventListener('click',yaTengoCuenta);
     function slideLeft() {
         
-    let activeSlide = document.querySelector('.slider-active'); 
-
-    let previousSlide = activeSlide.previousElementSibling;
-
-    if (previousSlide !== null){
-        activeSlide.classList.add('slider-hidden');
-
-function cerrarRegistro(){
-    bodyRegistro.style.display='none';
-}
-
-function yaTengoCuenta(){
-    bodyLogin.style.display='block'; 
-    bodyRegistro.style.display='none';
-}
-//-------- Funciones LogIn -------//
-let bodyLogin=document.querySelector('#loginMenu')
-let nuevo=document.querySelector('#sosNuevo');
-let imgXL=document.querySelector('#imgXL');
-
-nuevo.addEventListener('click',sosNuevo);
-imgXL.addEventListener('click',cerrarLogin);
-
-function abrirRegistro(){
-    bodyLogin.style.display='block';
-}
-function sosNuevo(){
-    bodyLogin.style.display='none'; 
-    bodyRegistro.style.display='block';
-}
-function cerrarLogin(){
-    bodyLogin.style.display='none';
-}
-        activeSlide.classList.remove('slider-active');
+        let activeSlide = document.querySelector('.slider-active'); 
+    
+        let previousSlide = activeSlide.previousElementSibling;
+    
+        if (previousSlide !== null){
+            activeSlide.classList.add('slider-hidden');
+            activeSlide.classList.remove('slider-active');
 
         previousSlide.classList.remove('slider-hidden');
 
@@ -82,7 +46,8 @@ function cerrarLogin(){
     }
 }
 
-    function slideRight() {
+
+function slideRight() {
    
     let activeSlide = document.querySelector('.slider-active');
    
@@ -107,6 +72,8 @@ function cerrarLogin(){
      slider.firstElementChild.classList.add('slider-active');
     }
    };
+
+        
 
     sliderLeft.addEventListener('click', slideLeft);
 
@@ -161,4 +128,42 @@ function cerrarLogin(){
 
     }
 
+
+    //-------- Funciones Registro ------//
+let bodyRegistro=document.querySelector('#registroMenu');
+let botonRegistro=document.querySelector('#profile');
+let botonCerrarRegistro=document.querySelector('#imgX')
+let tengoCuenta=document.querySelector('#tenesCuenta')
+
+botonRegistro.addEventListener('click',abrirRegistro);
+botonCerrarRegistro.addEventListener('click',cerrarRegistro);
+tengoCuenta.addEventListener('click',yaTengoCuenta);
+    
+
+function cerrarRegistro(){
+    bodyRegistro.style.display='none';
+}
+
+function yaTengoCuenta(){
+    bodyLogin.style.display='block'; 
+    bodyRegistro.style.display='none';
+}
+//-------- Funciones LogIn -------//
+let bodyLogin=document.querySelector('#loginMenu')
+let nuevo=document.querySelector('#sosNuevo');
+let imgXL=document.querySelector('#imgXL');
+
+nuevo.addEventListener('click',sosNuevo);
+imgXL.addEventListener('click',cerrarLogin);
+
+function abrirRegistro(){
+    bodyLogin.style.display='block';
+}
+function sosNuevo(){
+    bodyLogin.style.display='none'; 
+    bodyRegistro.style.display='block';
+}
+function cerrarLogin(){
+    bodyLogin.style.display='none';
+}
     

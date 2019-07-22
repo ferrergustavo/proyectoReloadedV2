@@ -1,3 +1,4 @@
+
 <nav>
 <div class="container_navBar">
         <div Class ="botonLineas">
@@ -35,6 +36,26 @@
         </div>
 </div>
 </nav>
+
+<div class="shop_display">
+<a href="javascript:void(0)" class="closebtn">X</a>
+<ul class="categories">
+    <li class="teclado__">
+    <img src="img/teclado-navbar.jpg" alt="">
+    <a>Teclados</a>
+    </li>
+    <li class=" auriculares__">
+    <img src="img/auricular-navbar.jpg" alt="">
+    <a>Auriculares</a>
+    </li>
+    <li class="mouse__">
+    <img src="img/mouse-navbar.jpg" alt="">
+    <a>Mouse</a>
+    </li>
+
+</ul>    
+</div>
+
 <!-- -----REGISTRO------>
 <div id="registroMenu" class="registroMenu">
     <div id="registroMenuContent" class="registroMenuContent">
@@ -112,23 +133,5 @@
                     <label class="cuenta" ><a id="sosNuevo" href="#">Sos nuevo en la pagina?</a></label>
                   </form>
         </div>
-    </div>
-
-<div class="shop_display">
-<a href="javascript:void(0)" class="closebtn">X</a>
-<ul class="categories">
-    <li class="teclado__">
-    <img src="img/teclado-navbar.jpg" alt="">
-    <a>Teclados</a>
-    </li>
-    <li class=" auriculares__">
-    <img src="img/auricular-navbar.jpg" alt="">
-    <a>Auriculares</a>
-    </li>
-    <li class="mouse__">
-    <img src="img/mouse-navbar.jpg" alt="">
-    <a>Mouse</a>
-    </li>
-
-</ul>    
+  </div>
 </div>
