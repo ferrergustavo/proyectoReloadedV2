@@ -2,7 +2,6 @@
 @section ('content')
 <body>
     <section>
-    <article class="botonesFiltros"></article>
     <article class="productos">
     <button class="filtro"><img src='{{asset('storage/filter_icon.svg')}}' alt="filter_icon"></button>
     </article>
@@ -13,7 +12,7 @@
         </a>
     </article>
     </section>
-    <script src="{{asset('js/filtros.js')}}"></script>
+    
     </body>
 @endsection
 @yield('footer') 

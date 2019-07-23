@@ -33,7 +33,7 @@
 .logo{
 
     width: 75px;   
-    margin-top: -21px;
+    margin-top: -12px;
 }
 
 .botonNavBar{
@@ -75,6 +75,7 @@
     display: flex;
     position: relative;
     z-index: 1002;
+    margin-top:1.5em;
 }
 
 .container_verticalIcons{
@@ -102,7 +103,7 @@
     justify-content:center;
     position: relative;
     align-content: center;
-    display:flex;
+   
     align-items: center;
     margin:0 auto;
 }
@@ -123,7 +124,7 @@
     justify-content:center;
     position: relative;
     align-content: center;
-    display:flex;
+    
     align-items: center;
     margin:0 auto;
 }
@@ -140,14 +141,14 @@
     justify-content:center;
     position: relative;
     align-content: center;
-    display:flex;
+    
     align-items: center;
     margin:0 auto;
 }
 
 
 .search_Icon img{
-    width:30%;
+    width:26%;
     display: flex;
     position:relative;
 }
@@ -158,7 +159,7 @@
     justify-content:center;
     position: relative;
     align-content: center;
-    display:flex;
+    
     align-items: center;
     margin:0 auto;
 }
@@ -176,14 +177,14 @@
     justify-content:center;
     position: relative;
     align-content: center;
-    display:flex;
+    
     align-items: center;
     margin:0 auto;
-    bottom:-10%;
+    bottom:-6%;
 }
 
 .help_Icon img{
-    width:30%;
+    width:23%;
     display:flex;
     position: relative;
 }
@@ -195,7 +196,7 @@
     justify-content:center;
     position: relative;
     align-content: center;
-    display:inline-flexbox;
+   
     align-items: center;
     margin:0 auto;
 }
@@ -204,6 +205,15 @@
     width:30%;
     display:flex;
     position:relative;
+}
+
+.titulos_iconos{
+    margin-top: 5px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 0.8em;
+    z-index: 1001;
+    color: white;
 }
 
 }
