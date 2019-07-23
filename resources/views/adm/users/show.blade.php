@@ -22,7 +22,7 @@
                     </dl>
                     <dl class="dlAdmUserShow">
                         <dt>Avatar:</dt>
-                        <dd><img src="{{$user->avatar}}" alt=""></dd>
+                        <dd class="ddShowPerfil"><img src="{{Storage::url($user->avatar)}}" alt=""></dd>
                     </dl>
                     <hr class="hrAdmUserShow">
                 </article> 

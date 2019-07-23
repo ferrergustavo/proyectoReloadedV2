@@ -29,7 +29,7 @@
             <p class="titulos_iconos">CARRITO</p>
             </div>
             <div class="search_Icon">
-            <a  class="nav_Icons" href="searchResult"><img src="img/search.svg" alt="search_icon"> </a>
+            <a  class="nav_Icons" href="#"><img src="img/search.svg" alt="search_icon"> </a>
             <p class="titulos_iconos">BUSCAR</p>
             </div>
             @guest
