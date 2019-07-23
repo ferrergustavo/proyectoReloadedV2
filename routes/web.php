@@ -40,6 +40,17 @@ Route::get('/productsInfo','ProductsController@productInfo');
 Route::get('/searchResult','SearchController@show');
 Route::get('shoppingCart','CartController@show');
 // --Rutas De Adm --
+
+Route::get('/adm','ProductsController@adm');
+Route::get('/admProduct','ProductsController@list');
+Route::get('/admProduct/new','ProductsController@create');
+Route::delete('/admProduct/delete','ProductsController@destroy');
+Route::put('/admProduct/update','ProductsController@update');
+// -- Rutas de navBar --
+Route::get('/faqs','FaqsController@index');
+Route::get('/selectedProduct','ProductsController@show');
+
+Route::get('/adm','admProductController@adm');
 Route::group(['prefix' => 'admin', 'middleware' => ['auth','profile']], function () {
     Route::resource('/adm', 'adminProductController');
     Route::resource('/adm', 'adminUserController');
@@ -58,6 +69,12 @@ Route::post('/admProduct/newBrandEnviar','admProductController@createBrand')->mi
 Route::post('/admProduct/createEnviar','admProductController@store')->middleware('auth','profile:9797');
 
 // -- Rutas De ADM USER--
+Route::get('/admUser','admUserController@index');
+Route::get('/admUser/show/{id}','admUserController@show');
+Route::get('/admUser/edit/{id}','admUserController@edit');
+Route::delete('/admUser/{id}','admUserController@destroy');
+Route::put('/editUser/{id}','admUserController@update')->name('editUser');
+
 Route::get('/admUser','admUserController@index')->middleware('auth','profile:9797');
 Route::get('/admUser/show/{id}','admUserController@show')->middleware('auth','profile:9797');
 Route::get('/admUser/edit/{id}','admUserController@edit')->middleware('auth','profile:9797');

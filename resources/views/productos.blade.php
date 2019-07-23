@@ -3,6 +3,8 @@
 <body>
     <section>
     <article class="productos">
+    <button class="filtro"><img src='{{asset('storage/filter_icon.svg')}}' alt="filter_icon"></button>
+    </article>
     <a href="/productInfo">
          <img src=img/razer3.jpg alt="razer3"> 
          <h3> PRECIO DE PRODUCTO</h3>
@@ -10,6 +12,7 @@
         </a>
     </article>
     </section>
+    
     </body>
 @endsection
 @yield('footer') 
