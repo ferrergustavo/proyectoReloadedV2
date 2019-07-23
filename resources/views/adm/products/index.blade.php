@@ -1,9 +1,10 @@
 @extends('layouts.admProducts')
 
 @section('admProduct')
+<div class="DivPro">
 <section class="sectionAdmProduct">
-                <a href="adm" class="aReturn"><- Return</a>
-                <h1 class="h1AdmProduct">ADMINISTRAR PRODUCTOS</h1>
+  <a href="adm" class="aReturn"><- Return</a>
+  <h1 class="h1AdmProduct">ADMINISTRAR PRODUCTOS</h1>
                 <hr class="hrAdmProduct">
          <div class="containerAdmProduct">
            <a href="admProduct/create" class="aNewProduct">New Product</a>
@@ -43,4 +44,5 @@
           </div>
     </div>
 </section>
+</div>
 @endsection

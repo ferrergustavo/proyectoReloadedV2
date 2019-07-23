@@ -1,8 +1,9 @@
 .footer{
-    background-color: rgb(37, 37, 37);
-    height: 3em;
+    background-color: rgba(19,19,19,0.5);
+    height: 3.4em;
     width: 100vw;
-    position: relative;
+    position: absolute;
+    bottom: 0;
 }
 
 @font-face{
@@ -13,6 +14,7 @@
  .footer_text{
     text-align: center;
     color: white;
+    margin-top: 14px;
     font-family: 'neutra-bookalt';
     size: 0.5 em;
 }

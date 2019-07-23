@@ -1,6 +1,6 @@
 @extends('layouts.admProducts')
 
-@section('admProductUpdate')
+@section('admProductEdit')
     <section class="sectionAdmUserEdit">
             <article class="articleAdmUserEdit">
                  <a href="../../admProduct" class="aReturn"><- Return</a>

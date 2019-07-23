@@ -1,6 +1,7 @@
 @extends('layouts.admUsers')
 
 @section('admUser')
+<div class="divPro">
 <section class="sectionAdmUser">
                 <a href="adm" class="aReturn"><- Return</a>
                 <h1 class="h1AdmUser">ADMINISTRAR USERS</h1>
@@ -62,6 +63,7 @@
           
     </div>        
 </section>
+</div>
 
 <!-- <div id="modalEliminar" class="modalUser">
             <div id="flex" class="flex">
