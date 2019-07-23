@@ -9,7 +9,7 @@ class Brand extends Model
 {
     protected $table= 'brand';
     protected $fillable = [
-        'name_b',
+        'name_b','img_b',
     ];
     public function product(){
         return $this->hasMany(Product::class);

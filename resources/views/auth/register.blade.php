@@ -14,28 +14,28 @@
                     @csrf
                     <div class="inputs">
                             <label for="nombre">Nombre:</label> <br>
-                            <input name="first_name" type="text" id="nombre" value=" {{old('fist_name')}} " placeholder="Ingrese su nombre ..." required  > <br>
+                            <input name="first_name" type="text" id="fist_nameCel" value=" {{old('fist_name')}} " placeholder="Ingrese su nombre ..." required  > <br>
                             <span class="errores">{{$errors->first('first_name')}} </span>
                     </div>
                     <div class="inputs">
                             <label for="nombre">Apellido:</label> <br>
-                            <input name="last_name" type="text" id="apellido" value=" {{old('last_name')}} " placeholder="Ingrese su apellido ..." required  > <br>
+                            <input name="last_name" type="text" id="last_nameCel" value=" {{old('last_name')}} " placeholder="Ingrese su apellido ..." required  > <br>
                             <span class="errores">{{$errors->first('last_name')}}</span>
                     </div>
                     <div class="inputs">
                       <label for="email">Email:</label> <!--NAME="email"--> <br>
-                      <input name="email" type="email" id="exampleInputEmail1" aria-describedby="emailHelp" value=" {{old('email')}} " placeholder="Ingrese email ..."required > <br>
+                      <input name="email" type="email" id="emailCel" aria-describedby="emailHelp" value=" {{old('email')}} " placeholder="Ingrese email ..."required > <br>
                       <span class="errores">{{$errors->first('email')}}</span>       
                     </div>
                     <div class="inputs">
                       <label for="contra">Contraseña:</label> <!--NAME="password"--> <br>
-                      <input name="password" type="password" id="exampleInputPassword1" placeholder="Contraseña" required >  <br>
+                      <input name="password" type="password" id="passwordCel" placeholder="Contraseña" required >  <br>
                       <span class="errores">{{$errors->first('password')}}</span>
                       <small id="olvidecontraseña" class="smalls"><p> La contraseña debe tener al menos 8 caracteres.</p></small>
                     </div>
                     <div class="inputs">
                             <label for="confirmcontra">Confirmar contraseña:</label> <br> <!--NAME="password_confirmation"-->
-                            <input name="password_confirmation" type="password" id="confirmPassRegistro" placeholder=" Confirme la contraseña"required > <br>
+                            <input name="password_confirmation" type="password" id="password_confirmationCel" placeholder=" Confirme la contraseña"required > <br>
                             <span class="errores"></span>                        
                     </div>
                     <button type="submit">Enviar</button> <br>

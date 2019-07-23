@@ -52,7 +52,7 @@
                     <!--  IMAGEN PRINCIPAL -->
                     <div class="inputsEditUser">
                         <h4> Imagen del producto: </h4>
-                        <img src="$products->img_p" alt="Cargando Img">
+                        <img class="imgProducts" src="{{Storage::url($products->img_p)}}" alt="Cargando Img">
                          <br> 
                          <input type="file" name="img_p">
                          <span class="errores">{{$errors->first('img_p')}}</span>
@@ -66,7 +66,7 @@
                     <!--  IMAGEN 2 -->
                     <div class="inputsEditUser">
                         <h4> Imagen del producto 2: </h4>
-                        <img src="$products->img2" alt="Cargando Img">
+                        <img class="imgProducts" src="{{Storage::url($products->img2)}}" alt="Cargando Img">
                          <br> 
                          <input type="file" name="img2" >
                          <span class="errores">{{$errors->first('img2')}}</span>
@@ -80,7 +80,7 @@
                     <!--  IMAGEN 3 -->
                     <div class="inputsEditUser">
                         <h4> Imagen del producto 3: </h4>
-                        <img src="$products->img3" alt="Cargando Img">
+                        <img class="imgProducts" src="{{Storage::url($products->img3)}}" alt="Cargando Img">
                          <br> 
                          <input type="file" name="img3">
                          <span class="errores">{{$errors->first('img3')}}</span>
@@ -94,7 +94,7 @@
                     <!--  IMAGEN 4 -->
                     <div class="inputsEditUser">
                         <h4> Imagen del producto 4: </h4>
-                        <img src="$products->img4" alt="Cargando Img">
+                        <img class="imgProducts" src="{{Storage::url($products->img4)}}" alt="Cargando Img">
                          <br> 
                          <input type="file" name="img4">
                          <span class="errores">{{$errors->first('img4')}}</span>

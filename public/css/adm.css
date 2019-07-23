@@ -1,7 +1,7 @@
 body{
     color: #c7c7c7;
     background-color: black;
-    font-family: 'neutra-bookalt';j
+    font-family: 'neutra-bookalt';
 }
 @font-face{
     font-family:'neutra-bookalt';
@@ -12,18 +12,18 @@ body{
     color: #c7c7c7;
     font-weight: bolder;
     height: 90vh;
+    text-align: center;
+}
 
- }
-/*.sAd{
-    display: flex;
-    align-content: center;
+.aAd{
+    margin-top: 10px;
     border: solid;
     border-width: 1px;
     border-color: blueviolet;
-    width: 100vw;
-    margin-top: 20%;
-    
+    width: 30%;
+    padding: 2em;
 }
+
  
 .aAd .btn{
     color: #c7c7c7;
@@ -42,42 +42,11 @@ body{
     text-decoration-style: double;
     text-decoration-color: blueviolet;
     margin-top: 1em;
-}
+}*/
 .aAd .btn:hover{
     font-size: 1.2em;
 }
-@media(min-width:992px){
-    .sAd{
-        display: flex;
-        align-content: center;
-        border: solid;
-        border-width: 1px;
-        border-color: blueviolet;
-        width: 35vw;
-        margin-top: 10%;
-    }
-    
-   .aAd .btn{
-        margin-bottom: 2em;
-    }
-    .sAd h1{
-        font-size: 2em;
-        text-decoration: underline;
-        text-decoration-style: double;
-        text-decoration-color: blueviolet;
-    }
-}
-@media(min-width:650px){
-    .sAd{
-        display: flex;
-        align-content: center;
-        border: solid;
-        border-width: 1px;
-        border-color: blueviolet;
-        width: 35vw;
-        margin-top: 10%;
-    }
-}*/
+
 .aReturn{
     color: #c7c7c7;
     text-decoration: none;

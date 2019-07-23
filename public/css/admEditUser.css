@@ -50,6 +50,10 @@
 .UserName:hover{
     color:red;
 }
+.imgProducts{
+    width: 397px;
+    height: 210px;
+}
 @media (max-width:768px){
     .divBoton{
         font-size: 1.3em;

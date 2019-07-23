@@ -28,13 +28,11 @@
                         <a href="admProduct/edit/{{$product->id}}">modificar</a> 
                   </td>
                   <td class="tdAdmProduct">
-                    <form id='form-delete' method="POST" action="admProduct/{{$product->id}}">
-                        @method('DELETE')
+                  <form id='form-delete' class='form-delete' action="admProduct/{{$product->id}}" method="post">
+                        @method('delete')
                         @csrf
-                      <!--  <button type="submit" id="eliminar" class="eliminarAdmUser">eliminar</button> -->
-                      <a href='#' id='eliminarProduct' class="" data-toggle="tooltip" title="Delete">Eliminar</a>
-                        <!--<a href="" id="eliminar">eliminar</a> -->
-                      </form>
+                        <a href='#' id='delete-link' class="eliminarAdmUser" data-toggle="tooltip" title="Delete">Eliminar</a>
+					</form>
                   </td>
                   <td class="tdAdmProduct">
                         <a href="admProduct/show/{{$product->id}}">+Info</a>
