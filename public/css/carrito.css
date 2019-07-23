@@ -1,0 +1,23 @@
+.divCart{
+   width: 50%;
+    background-color: grey;
+    position: relative;
+    top: 100px;
+    bottom: 2em;
+    height: 60%;
+}
+
+.containerItems{
+    display: flex;   
+}
+.itemCarrito img{
+    width: 80px;
+    height: 80px;
+}
+.containeritems{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.itemCarrito{
+   padding: 0.4em;
+   margin: 0;
+}

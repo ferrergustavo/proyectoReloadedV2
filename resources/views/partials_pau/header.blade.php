@@ -11,8 +11,19 @@
     <link rel="stylesheet" href='{{asset('css/footer.css')}}'>
     <link rel="stylesheet" href='{{asset('css/navBar.css')}}'>
     <link rel="stylesheet" href='{{asset('css/productos_catalogo.css')}}'>
-    <link rel="stylesheet" href='{{asset('css/faqs.css')}}'>
     <link rel="stylesheet" href='{{asset('css/producto_seleccionado.css')}}'>
+    <link rel="stylesheet" href='{{asset('css/faqs.css')}}'>
+    <link rel="stylesheet" href='{{asset('css/carrito.css')}}'>
+
+    <!-- CSS ADM -->
+    <link rel="stylesheet" href='{{asset('css/adm.css')}}'>
+    <!-- CSS ADM User -->
+    <link rel="stylesheet" href='{{asset('css/admUser.css')}}'>
+    <link rel="stylesheet" href='{{asset('css/admEditUser.css')}}'>
+    <link rel="stylesheet" href='{{asset('css/admUserShow.css')}}'>
+    <!-- CSS ADM Products-->
+    <link rel="stylesheet" href='{{asset('css/admProduct.css')}}'>
+    <link rel="stylesheet" href='{{asset('css/admProductCreate.css')}}'>
 
     <link rel="shortcut icon" href="img/favicon.ico">
 </head>

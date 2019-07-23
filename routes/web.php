@@ -16,8 +16,14 @@
 
 Auth::routes();
 
-Route::get('/', 'IndexController@home');
+Route::get('/', 'IndexController@home')->middleware('cart');
 Route::get('/products','ProductsController@index');
+
+Route::group(['middleware' => 'cart'], function () {
+    Route::get('/', 'IndexController@home');
+    Route::get('/products',['uses'=>'ProductsController@getIndex','as'=>'product.index']);
+    Route::get('addToCart/{id}',['uses'=> 'ProductsController@getAddToCart','as'=>'products.addToCart']);
+});
 
 
 
@@ -38,7 +44,8 @@ Route::get('/productsInfo','ProductsController@productInfo');
 
 
 Route::get('/searchResult','SearchController@show');
-Route::get('shoppingCart','CartController@show');
+Route::get('/shoppingCart','CartController@show');
+
 // --Rutas De Adm --
 
 Route::get('/adm','ProductsController@adm');

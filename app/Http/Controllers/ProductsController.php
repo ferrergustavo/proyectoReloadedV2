@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
+use Session;
+use App\Cart;
 
 class ProductsController extends Controller
 {
@@ -83,6 +86,30 @@ class ProductsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+
+public function getIndex()
+    {
+        $products = Product::all(); 
+        
+        $cart = Session::get('cart');
+
+        return view('productos')->with('products',$products);
+    }
+
+    public function getAddToCart(Request $request, $id)
+    {
+        $product= Product::find($id);
+
+        $cart = session()->get('cart');
+
+        $new = $cart->add($product);
+
+        session()->put('cart', $new);
+
+        return redirect()->route('product.index');
     }
 
 }

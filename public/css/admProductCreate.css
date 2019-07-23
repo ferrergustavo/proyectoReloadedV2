@@ -1,6 +1,7 @@
 .sectionAdmProductCreate{
     display: flex;
     color: #c7c7c7;
+    height: 80%;
 }
 .articleAdmProductCreate{
     border:solid;

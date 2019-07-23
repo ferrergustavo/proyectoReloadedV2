@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
-    public function show(){
-        return view ('shoppingCart');
+    public function show(){ 
+        return view ('shoppingCart', [
+            'cart' => session('cart')
+        ]);  
     }
 }
