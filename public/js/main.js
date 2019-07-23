@@ -2,95 +2,6 @@ window.addEventListener('load',cargar)
 
 function cargar(){
 
-    //---- Slider----//
-    
-    const slider = document.querySelector('.slider');
-
-    console.log(slider);
-
-    const slides = document.querySelector('.slider_');
-
-    console.log(slides);
-
-    const sliderLeft = document.querySelector('.control-left');
-    
-    console.log(sliderLeft);
-
-    const sliderRight = document.querySelector('.control-right');
-
-    console.log(sliderRight);
-
-
-    function slideLeft() {
-        
-        let activeSlide = document.querySelector('.slider-active'); 
-    
-        let previousSlide = activeSlide.previousElementSibling;
-    
-        if (previousSlide !== null){
-            activeSlide.classList.add('slider-hidden');
-            activeSlide.classList.remove('slider-active');
-
-        previousSlide.classList.remove('slider-hidden');
-
-        previousSlide.classList.add('slider-active');
-    }else{
-
-        activeSlide.classList.add('slider-hidden');
-
-        activeSlide.classList.remove('slider-active');
-
-        slider.lastElementChild.classList.remove('slider-hidden');
-
-        slider.lastElementChild.classList.add('slider-active');
-    }
-}
-
-
-function slideRight() {
-   
-    let activeSlide = document.querySelector('.slider-active');
-   
-    let nextSlide = activeSlide.nextElementSibling;
-   
-    if (nextSlide !== null) {
-     activeSlide.classList.add('slider-hidden');
-   
-     activeSlide.classList.remove('slider-active');
-   
-     nextSlide.classList.remove('slider-hidden');
-   
-     nextSlide.classList.add('slider-active');
-    } else {
-     
-     activeSlide.classList.add('slider-hidden');
-   
-     activeSlide.classList.remove('slider-active');
-   
-     slider.firstElementChild.classList.remove('slider-hidden');
-   
-     slider.firstElementChild.classList.add('slider-active');
-    }
-   };
-
-        
-
-    sliderLeft.addEventListener('click', slideLeft);
-
-    sliderRight.addEventListener('click', slideRight);
-
-   
-
-   //-------------- Con Botones del teclado--------------//
-
-   document.onkeyup = function(evento){
-    if(event.keyCode==39){
-        slideRight();
-    }else if(event.keyCode==37){
-        slideLeft();
-    }
-    };
-
     //-------------------------Boton Shop-----------------------------------//
 
         let show_sidebar = document.querySelector('.shop_Icon');
@@ -99,7 +10,7 @@ function slideRight() {
         let container = document.querySelector('.slideshow');
 
         show_sidebar.onclick = function(){
-            mySidebar.style.width = "40%";
+            mySidebar.style.display = "block";
             container.style.opacity = "0.5";
             bodyRegistro.style.display='none';
             bodyLogin.style.display='none'; 
@@ -107,10 +18,10 @@ function slideRight() {
         }
 
         close_sidebar.onclick = function(){
-            mySidebar.style.width = "0";
+            mySidebar.style.display = "none";
             container.style.opacity = "1";
         }
-
+        
         
         //------- Accordion Navbar-------//
         
@@ -128,6 +39,25 @@ function slideRight() {
                 }
             }
             
+        }
+        //-------Busqueda-----//
+        let containerBusqueda = document.querySelector('.search_display');
+        let botonSearch = document.querySelector('.search_Icon');
+        let cerrarBusqueda = document.querySelector('#imgXP');
+
+
+        botonSearch.addEventListener('click',abrirSearch);
+        cerrarBusqueda.addEventListener('click',cerrarSearch);
+
+        function abrirSearch(){
+            containerBusqueda.style.display="block";
+            bodyLogin.style.display='none'; 
+            bodyRegistro.style.display='none';
+            mySidebar.style.width = "0";
+        }
+       
+        function cerrarSearch(){
+            containerBusqueda.style.display="none";
         }
         
         
@@ -258,25 +188,6 @@ function slideRight() {
         }
         
 
-        //-------Busqueda-----//
-        let containerBusqueda = document.querySelector('.search_display');
-        let botonSearch = document.querySelector('#search');
-        let cerrarBusqueda = document.querySelector('#imgXP');
-
-
-        botonSearch.addEventListener('click',abrirSearch);
-        cerrarBusqueda.addEventListener('click',cerrarSearch);
-
-        function abrirSearch(){
-            containerBusqueda.style.display="block";
-            bodyLogin.style.display='none'; 
-            bodyRegistro.style.display='none';
-            mySidebar.style.width = "0";
-        }
-       
-        function cerrarSearch(){
-            containerBusqueda.style.display="none";
-        }
         
     }
 

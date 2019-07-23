@@ -29,7 +29,7 @@
             <p class="titulos_iconos">CARRITO</p>
             </div>
             <div class="search_Icon">
-            <a  class="nav_Icons" href="searchResult"><img src="img/search.svg" alt="search_icon"> </a>
+            <a  class="nav_Icons" href="#"><img src="img/search.svg" alt="search_icon"> </a>
             <p class="titulos_iconos">BUSCAR</p>
             </div>
             @guest
@@ -166,19 +166,14 @@
 <div class="search_display">
 <span id="imgXP" class="imgX"><img src='img/X.svg' alt=""></span>
 <form action="/search" method="get">
-<div clas>
-  <input type="search" placeholder="Hermano querido aca puedes realizar tu busqueda" name="busqueda">
+<div class="search__">
+  <input type="search" placeholder="" name="busqueda">
   <button type="submit" class="seach_button"><i class="fas fa-search"></i></button>
 </div>
 </form> 
 <div class="search_container">
 <ul>
 <li class="search_brands"><a href=""><img src="img/auricular-navbar.jpg" alt=""><p>Razer</p></a></li>
-<li class="search_brands"><a href=""><img src="img/auricular-navbar.jpg" alt=""><p>Razer</p></a></li>
-<li class="search_brands"><a href=""><img src="img/auricular-navbar.jpg" alt=""><p>Razer</p></a></li>
-<li class="search_brands"><a href=""><img src="img/auricular-navbar.jpg" alt=""><p class="search_a">Razer</p></a></li>
-<li class="search_brands"><a href=""><img src="img/auricular-navbar.jpg" alt=""><p class="search_a">Razer</p></a></li>
-<li class="search_brands"><a href=""><img src="img/auricular-navbar.jpg" alt=""><p class="search_a">Razer</p></a></li>
 </ul>
 </div>
 

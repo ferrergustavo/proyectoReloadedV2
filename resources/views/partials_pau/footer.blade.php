@@ -8,6 +8,7 @@
  <script src="/js/faqs.js"></script>
  <script src="{{asset('js/filtros.js')}}"></script>
  <script src ="{{asset('js/main.js')}}"></script>
+ <script src ="{{asset('js/carousel.js')}}"></script>
  <script src="{{asset('js/elimModUsPr.js')}}"></script>
 </body>
 </html>
