@@ -9,7 +9,13 @@
         <a class="botonNavBar" href="search.php" ><img class="botonNavBar"src="img/search.svg" alt="Search"></a>
         <div class="logo"><a href="/"><img src="img/logo.svg" alt=""></a></div>
         <a class="botonNavBar" href="carrito.php" ><img class="botonNavBar"src="img/carrito.svg" alt="Shopping_Cart"></a>
+        @guest
         <a class="botonNavBar" href="login" ><img class="botonNavBar"src="img/profile.png" alt="Profile_icon"></a>
+        @else
+          <div  class="Perfil__">
+              <img id="imgUserCel" src='{{Storage::url(Auth::user()->avatar)}}' alt="">
+            </div>
+        @endguest
         </div>
 <div class="container_NavBarVertical">
         <div class="logo_Vertical"><a href="index.php"><img src="img/logo.svg" alt=""></a></div>
@@ -28,8 +34,8 @@
             <a id="profile" class="nav_Icons" href="#"><img src="img/profile2.svg" alt="profile_icon"> </a>
             </div>
             @else
-            <div>
-            <p>{{Auth::User()->first_name}}</p>
+            <div class="profile_logueado">
+            <img src='{{Storage::url(Auth::user()->avatar)}}' alt="">
             </div>
             @if (Auth::User()->profile==9797)
               <div class='admin_Icon'>
@@ -102,7 +108,7 @@
                     </div>
                     <div class="inputs">
                             <label for="confirmcontra">Confirmar contraseña:</label> <br> <!--NAME="password_confirmation"-->
-                            <input name="password_confirmation" type="password" id="confirmPassRegistro" placeholder=" Confirme la contraseña"required > <br>
+                            <input name="password_confirmation" type="password" id="password_confirmation" placeholder=" Confirme la contraseña"required > <br>
                             <span id="errorConfirmPassRegistro"></span>
                             <span class="errores"></span>                        
                     </div>
@@ -171,3 +177,6 @@
 </div>
 
 </div>
+
+
+

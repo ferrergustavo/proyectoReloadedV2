@@ -254,10 +254,22 @@ class admProductController extends Controller
     public function createBrand(Request $request){
         $this->validate($request, [
             "name_b" => 'required|unique:brand|string',
+            "img_b" => 'required|image',
         ]);
         $brand = new Brand([
             'name_b' => $request->input("name_b"),
         ]);
+        $nameImg_b=$request->input('nameImg_b');
+
+        $path = $request->file('img_b');
+
+        if($path!=null){
+        $extension = $request->file('img_b')->extension();
+        }
+        if (!is_null($path)) {
+            $imgFinal_b=$path->storeAs('public/logosBrand',$nameImg_b.'.'.$extension);
+            $brand->img_b = $imgFinal_b;
+             }
 
         $brand->save();
         return redirect('/admProduct');
