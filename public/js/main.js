@@ -53,32 +53,13 @@ function cargar(){
             containerBusqueda.style.display="block";
             bodyLogin.style.display='none'; 
             bodyRegistro.style.display='none';
-            mySidebar.style.width = "0";
+            mySidebar.style.display = 'none';
         }
        
         function cerrarSearch(){
             containerBusqueda.style.display="none";
         }
         
-        //-------Busqueda-----//
-        let containerBusqueda = document.querySelector('.search_display');
-        let botonSearch = document.querySelector('.search_Icon');
-        let cerrarBusqueda = document.querySelector('#imgXP');
-
-
-        botonSearch.addEventListener('click',abrirSearch);
-        cerrarBusqueda.addEventListener('click',cerrarSearch);
-
-        function abrirSearch(){
-            containerBusqueda.style.display="block";
-            bodyLogin.style.display='none'; 
-            bodyRegistro.style.display='none';
-            mySidebar.style.width = "0";
-        }
-       
-        function cerrarSearch(){
-            containerBusqueda.style.display="none";
-        }
         
         //-------- Funciones Registro ------//
         let bodyRegistro=document.querySelector('#registroMenu');
@@ -111,7 +92,7 @@ function cargar(){
         function abrirRegistro(){
             bodyLogin.style.display='block';
             bodyRegistro.style.display='none';
-            mySidebar.style.width = "0";
+            mySidebar.style.display = 'none';
             containerBusqueda.style.display="none";
         }
         function sosNuevo(){
