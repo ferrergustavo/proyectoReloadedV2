@@ -8,7 +8,7 @@
                     <div class="description">
                     <p class="item">{{$product->name_p}}</p>
                     <p>Price: <em>${{$product->price}}</em></p>
-                    <button class="add-to-cart" type="button">Ver Producto</button>    
+                    <a class="agregarBtn" href= "addToCart/{{$product->id}}"> Agregar al carrito </a> 
                 </div>
             </div>
     @endforeach 

@@ -50,8 +50,8 @@
                 <div class="description">
                 <p class="item">{{$productM->name_p}}</p>
                 <p>Price: <em>${{$productM->price}}</em></p>
-                <button class="add-to-cart" type="button">Ver Producto</button>    
-              </div>
+                <a href="infoProduct/{{$productM->id}}">Info Producto</a>
+            </div>
        </div>
        @endforeach
        </div>
@@ -64,7 +64,7 @@
                 <div class="description">
                 <p class="item">{{$productT->name_p}}</p>
                 <p>Price: <em>${{$productT->price}}</em></p>
-                <button class="add-to-cart" type="button">Ver Producto</button>    
+               <a href="infoProduct/{{$productT->id}}">Info Producto</a>
               </div>
         </div>
              @endforeach
@@ -78,7 +78,7 @@
                 <div class="description">
                 <p class="item">{{$productA->name_p}}</p>
                 <p>Price: <em>${{$productA->price}}</em></p>
-                <button class="add-to-cart" type="button">Ver Producto</button>    
+                <a href="infoProduct/{{$productT->id}}">Info Producto</a>
               </div>
         </div>
              @endforeach
@@ -97,7 +97,7 @@
                 <p class="item">{{$productM->name_p}}</p>
                 <p>Price: <em>${{$productM->price}}</em></p>
             </div>
-            <button class="add-to-cart" type="button">Ver Producto</button>    
+            <a href="infoProduct/{{$productT->id}}">Info Producto</a>
        </div>
        @endforeach  
 </div>

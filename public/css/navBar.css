@@ -625,3 +625,22 @@ input[type=search] {
      animation: _searchSlider 1s ease-in-out;
      background-color: #7A7A7A;
  }
+
+
+ @media(max-width:768px){
+    .categories{
+        width: 72%;
+        right: 15%;
+    }
+    .shop_display button{
+        position: relative;
+        left: 32%;
+        top: 13%;
+    }
+ }
+ @media(max-width:425px){
+     .categories{
+         width: 100%;
+         right: 0;
+     }
+ }
