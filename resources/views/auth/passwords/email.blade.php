@@ -46,19 +46,5 @@
     </div>
 </div>
 @endsection
-<!-- <section class="section1">
-            <article class="article1">
-            <h1>Olvidaste la contraseña?</h1> <hr>
-            <form method="POST" action="">
-                    <div class="inputs">
-                      <label for="email">Email:</label> <br>
-                      <input name="email" type="email" id="exampleInputEmail1" aria-describedby="emailHelp" value="" placeholder="Ingrese email..." required > <br>
-                      <span class="errores"> {{$errors->first('email')}} </span>
-                      <small id="emailHelp" class="form-text text-muted"></small>
-                    </div>
-                    <button type="submit">Enviar</button> <br>
-                    <hr class="opt">
-                  </form>
-            </article>
-        </section> -->
+
 

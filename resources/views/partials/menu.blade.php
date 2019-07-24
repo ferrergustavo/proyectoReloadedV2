@@ -173,12 +173,9 @@
 </form> 
 <div class="search_container">
 <ul>
-<li class="search_brands"><a href=""><img src="img/auricular-navbar.jpg" alt=""><p>Razer</p></a></li>
-<li class="search_brands"><a href=""><img src="img/auricular-navbar.jpg" alt=""><p>Razer</p></a></li>
-<li class="search_brands"><a href=""><img src="img/auricular-navbar.jpg" alt=""><p>Razer</p></a></li>
-<li class="search_brands"><a href=""><img src="img/auricular-navbar.jpg" alt=""><p class="search_a">Razer</p></a></li>
-<li class="search_brands"><a href=""><img src="img/auricular-navbar.jpg" alt=""><p class="search_a">Razer</p></a></li>
-<li class="search_brands"><a href=""><img src="img/auricular-navbar.jpg" alt=""><p class="search_a">Razer</p></a></li>
+  @foreach($brands as $brand)
+<li class="search_brands"><a href=""><img src="{{Storage::url($brand->img_b)}}" alt=""><p>{{$brand->name_b}}</p></a></li>
+@endforeach
 </ul>
 </div>
 
