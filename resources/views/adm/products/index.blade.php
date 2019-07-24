@@ -33,7 +33,7 @@
                   <form id='form-delete' class='form-delete' action="admProduct/{{$product->id}}" method="post">
                         @method('delete')
                         @csrf
-                        <a href='#' id='delete-link' class="eliminarAdmUser" data-toggle="tooltip" title="Delete">Eliminar</a>
+                        <button type="submit" id="eliminar" class="eliminarAdmUser">eliminar</button>
 					</form>
                   </td>
                   <td class="tdAdmProduct">
