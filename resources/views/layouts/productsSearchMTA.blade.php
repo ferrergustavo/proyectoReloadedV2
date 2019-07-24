@@ -1,4 +1,4 @@
 @include('partials.header')
 @include('partials.menu')
-@yield('content')
+@yield('productSearchMTA')
 @include('partials.footer')

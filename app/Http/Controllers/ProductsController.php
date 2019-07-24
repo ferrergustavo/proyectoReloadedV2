@@ -53,6 +53,7 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
+
         return view ('selectedProduct');
     }
 
@@ -112,6 +113,24 @@ public function getIndex()
         session()->put('cart', $new);
 
         return redirect()->route('product.index');
+    }
+    public function productSelectT(){
+        $brands=Brand::All();
+        $products=Product::where('category_id','=',2)->paginate(4);
+        return view('teclado',compact('brands','products'));
+    }
+    public function productSelectA(){
+        $brands=Brand::All();
+        $products=Product::where('category_id','=',3)->paginate(4);
+        return view('auriculares',compact('brands','products'));
+        
+    }
+    public function productSelectM(){
+        $brands=Brand::All();
+        $products=Product::where('category_id','=',1)->paginate(4);
+        
+        return view('mouse',compact('brands','products'));
+        
     }
 
 }

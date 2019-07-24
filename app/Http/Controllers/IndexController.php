@@ -11,11 +11,12 @@ use DB;
 use Illuminate\Support\Facades\Auth;
 class IndexController extends Controller
 {
+
     public function home(){
         $brands=Brand::all();
-        $productsMouse=Product::where('category_id','1')->orderBy(DB::raw('RAND()'))->take(2)->get();
-        $productsTeclado=Product::where('category_id','2')->orderBy(DB::raw('RAND()'))->take(2)->get();;
-        $productsAuriculares=Product::where('category_id','3')->orderBy(DB::raw('RAND()'))->take(2)->get();;
+        $productsMouse=Product::where('category_id','1')->orderBy(DB::raw('RAND()'))->take(3)->get();
+        $productsTeclado=Product::where('category_id','2')->orderBy(DB::raw('RAND()'))->take(3)->get();;
+        $productsAuriculares=Product::where('category_id','3')->orderBy(DB::raw('RAND()'))->take(3)->get();;
        
         return view('index',compact('brands','productsMouse','productsTeclado','productsAuriculares'));
     }

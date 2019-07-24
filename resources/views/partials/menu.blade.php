@@ -67,7 +67,9 @@
 </form> 
 <div class="search_container">
 <ul>
-<li class="search_brands"><a href=""><img src="img/auricular-navbar.jpg" alt=""><p>Razer</p></a></li>
+  @foreach($brands as $brand)
+<li class="search_brands"><a href=""><img src="{{Storage::url($brand->img_b)}}" alt=""><p>{{$brand->name_b}}</p></a></li>
+@endforeach
 </ul>
 </div>
 </div>
@@ -78,15 +80,15 @@
 <ul class="categories">
     <li class="teclado__">
     <img src="img/teclado-navbar.jpg" alt="">
-    <a>Teclados</a>
+    <a href="/teclado">Teclados</a>
     </li>
     <li class=" auriculares__">
     <img src="img/auricular-navbar.jpg" alt="">
-    <a>Auriculares</a>
+    <a href="/auriculares">Auriculares</a>
     </li>
     <li class="mouse__">
     <img src="img/mouse-navbar.jpg" alt="">
-    <a>Mouse</a>
+    <a href="/mouse">Mouse</a>
     </li>
 
 </ul>    

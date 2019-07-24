@@ -18,6 +18,9 @@ Auth::routes();
 
 Route::get('/', 'IndexController@home')->middleware('cart');
 Route::get('/products','ProductsController@getIndex');
+Route::get('/teclado','ProductsController@productSelectT');
+Route::get('/mouse','ProductsController@productSelectM');
+Route::get('/auriculares','ProductsController@productSelectA');
 
 Route::group(['middleware' => 'cart'], function () {
     Route::get('/', 'IndexController@home');

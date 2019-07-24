@@ -19,7 +19,7 @@ class admProductController extends Controller
         $categories=Category::All();
         $brands=Brand::All();
         $products=Product::orderBy('name_p')->get();
-        $products=\App\Product::paginate(6);
+        $products=\App\Product::paginate(5);
         
         return view('adm.products.index',compact('categories','brands','products'));
     }
