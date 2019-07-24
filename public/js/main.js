@@ -1,66 +1,4 @@
-window.addEventListener('load',cargar)
 
-function cargar(){
-
-    //-------------------------Boton Shop-----------------------------------//
-
-        let show_sidebar = document.querySelector('.shop_Icon');
-        let mySidebar = document.querySelector('.shop_display')
-        let close_sidebar = document.querySelector('#imgXY');
-        let container = document.querySelector('.slideshow');
-
-        show_sidebar.onclick = function(){
-            mySidebar.style.display = "block";
-            container.style.opacity = "0.5";
-            bodyRegistro.style.display='none';
-            bodyLogin.style.display='none'; 
-            containerBusqueda.style.display="none";
-        }
-
-        close_sidebar.onclick = function(){
-            mySidebar.style.display = "none";
-            container.style.opacity = "1";
-        }
-        
-        
-        //------- Accordion Navbar-------//
-        
-        let accordions = document.getElementsByClassName('accordion_button');
-        console.log(accordions);
-        for(let i = 0; i < accordions.length;i++){
-            accordions[i].onclick = function(){
-                let content = this.nextElementSibling;
-                console.log(content);
-                
-                if(content.style.maxHeight){
-                    content.style.maxHeight = null ;
-                }else{
-                    content.style.maxHeight = 200 +"px";
-                }
-            }
-            
-        }
-        //-------Busqueda-----//
-        let containerBusqueda = document.querySelector('.search_display');
-        let botonSearch = document.querySelector('.search_Icon');
-        let cerrarBusqueda = document.querySelector('#imgXP');
-
-
-        botonSearch.addEventListener('click',abrirSearch);
-        cerrarBusqueda.addEventListener('click',cerrarSearch);
-
-        function abrirSearch(){
-            containerBusqueda.style.display="block";
-            bodyLogin.style.display='none'; 
-            bodyRegistro.style.display='none';
-            mySidebar.style.display = 'none';
-        }
-       
-        function cerrarSearch(){
-            containerBusqueda.style.display="none";
-        }
-        
-        
         //-------- Funciones Registro ------//
         let bodyRegistro=document.querySelector('#registroMenu');
         let botonRegistro=document.querySelector('#profile');
@@ -98,18 +36,27 @@ function cargar(){
         function sosNuevo(){
             bodyLogin.style.display='none'; 
             bodyRegistro.style.display='block';
+        }
+
+        function cerrarLogin(){
+            bodyLogin.style.display='none';
+            container.style.opacity = "1";
+        }
+            
             /* ---- Validacion Registro -----*/
             let form=document.querySelector('#form_Register');
             form.elements.first_name.focus();
             console.log(form.elements);
-             form.onsubmit = function(e) {
-                 if (!validaciones()) {
-                     e.preventDefault();
-                 }else{
-                     form.submit();
-                 }
+            form.onsubmit = function(e) {
+                if (!validaciones()) {
+                    e.preventDefault();
+                }else{
+                    form.submit();
+                }
              }
             
+
+
              function validaciones(){
                  let {first_name,last_name,email,password,confirmPassRegistro}=form.elements;
                  if (!validarFirst_name(first_name))return false;
@@ -181,15 +128,11 @@ function cargar(){
 
              /* ---- Finaliza Validacion Registro ---*/
 
-        }
-        function cerrarLogin(){
-            bodyLogin.style.display='none';
-            container.style.opacity = "1";
-        }
+        
         
 
         
-    }
+    
 
 
 

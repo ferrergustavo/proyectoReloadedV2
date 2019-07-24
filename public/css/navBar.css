@@ -166,6 +166,7 @@
     width:45%;
     display:flex;
     position: relative;
+    border-radius:50%;
 }
 
 .search_Icon img{
@@ -514,13 +515,13 @@
     border-radius:inherit;
     border:none;
     top:10%;
-    border: 2px solid #7A7A7A;  /* Overridden by border: 2px inset; */
+    border: 2px solid #7A7A7A;  
 
 }
 
 input[type=search] { 	
-	border: 2px solid #7A7A7A;  /* Overridden by border: 2px inset; */
-	background: #535353;          /* Overridden by background-color: white; */
+	border: 2px solid #7A7A7A;  
+	background: #535353;         
 }
 
 
@@ -541,3 +542,54 @@ input[type=search] {
     text-transform: uppercase;
     color: #c7c7c7;
 }
+
+
+/*---- Perfil Display-----*/
+
+.profile_display{
+    width: 45%;
+    height: 100vh;
+    position: fixed;
+    background-color:rgba(19, 19, 19, 0.9);
+    display: none;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    animation: profileSlider 1s ease-in-out;
+}
+.__profile{
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    top:25%;
+    margin-left: 20%;
+}
+
+.__profile img{
+    width: 40%;
+    height: 50%;
+    position: relative;
+    top:-10%;
+    border-radius:50%;
+
+}
+
+.__profile p{
+    top: -5%;
+    position: relative;
+    font-size:1.7vw;
+}
+
+
+.perfil_buttons{
+    position: relative;
+    top:10%;
+}
+
+@keyframes profileSlider{
+    from{left: -330px; opacity: 0;}
+    to{left: 0px; opacity: 1;}
+ }

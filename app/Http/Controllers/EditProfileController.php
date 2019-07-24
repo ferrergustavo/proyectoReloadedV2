@@ -14,7 +14,7 @@ class EditProfileController extends Controller
      */
     public function index()
     {
-        return view('editprofile');
+      //  return view('editprofile');
     }
 
     /**
@@ -82,7 +82,7 @@ class EditProfileController extends Controller
             if ($path) {
                 $filename = $path->store('public/avatars');
                 $dbFilename = explode('/',$filename);
-                $filename = 'storage/avatars/'.$dbFilename[2];
+                $filename = '/avatars/'.$dbFilename[2];
                 $user->avatar = $filename;
         
             }
@@ -90,6 +90,7 @@ class EditProfileController extends Controller
             
         $user->save();
 
+       return redirect("editprofile/$user->id");
        
     }
 

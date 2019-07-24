@@ -23,11 +23,11 @@ Route::get('/products','ProductsController@index');
 
 
 // Rutas editar perfil
-Route::get('/editprofile','EditProfileController@index');
+//Route::get('/editprofile','EditProfileController@index');
 Route::get('/editprofile/{id}','EditProfileController@edit');
-Route::put('/update/{id}', 'EditProfileController@update')->name('update');
+Route::put('editprofile/update/{id}', 'EditProfileController@update');
 
-
+Route::post('logout', 'IndexController@logout')->name('logout');
 //Search
 Route::get('/search', 'SearchController@search');
 

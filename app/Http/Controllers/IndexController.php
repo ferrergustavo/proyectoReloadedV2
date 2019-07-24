@@ -3,13 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 class IndexController extends Controller
 {
     public function home(){
         return view('index');
     }
 
+    public function logout(Request $request) {
+        Auth::logout();
+        return redirect('/');
+    }
     /**
      * Display a listing of the resource.
      *

@@ -55,6 +55,21 @@
         </div>
 </div>
 </nav>
+<!----Busqueda------>
+<div class="search_display">
+<span id="imgXP" class="imgX"><img src='img/X.svg' alt=""></span>
+<form action="/search" method="get">
+<div class="search__">
+  <input type="search" placeholder="" name="busqueda">
+  <button type="submit" class="seach_button"><i class="fas fa-search"></i></button>
+</div>
+</form> 
+<div class="search_container">
+<ul>
+<li class="search_brands"><a href=""><img src="img/auricular-navbar.jpg" alt=""><p>Razer</p></a></li>
+</ul>
+</div>
+</div>
 
 <!------Shop Display ----->
 <div class="shop_display">
@@ -77,6 +92,7 @@
 </div>
 
 <!-- -----REGISTRO------>
+@guest
 <div id="registroMenu" class="registroMenu">
     <div id="registroMenuContent" class="registroMenuContent">
         <div id="headRegister" class="headRegister">
@@ -162,22 +178,30 @@
 </div>
 
 
-<!----Busqueda------>
-<div class="search_display">
-<span id="imgXP" class="imgX"><img src='img/X.svg' alt=""></span>
-<form action="/search" method="get">
-<div class="search__">
-  <input type="search" placeholder="" name="busqueda">
-  <button type="submit" class="seach_button"><i class="fas fa-search"></i></button>
-</div>
-</form> 
-<div class="search_container">
-<ul>
-<li class="search_brands"><a href=""><img src="img/auricular-navbar.jpg" alt=""><p>Razer</p></a></li>
-</ul>
-</div>
 
-</div>
+
+<!----Perfil----->
+@else
+  <div class="profile_display">
+  <span id="imgXI" class="imgX"><img src='img/X.svg' alt=""></span>
+  <div class="__profile">
+    <img src="{{Storage::url(Auth::User()->avatar)}}" alt="">
+    <p>{{Auth::User()->first_name}}</p>
+    <p>{{Auth::User()->last_name}}</p>
+
+    <div class="perfil_buttons">
+      <form action="editprofile/{{Auth::User()->id}}">
+      <button type="submit">Edit Profile</button>
+      </form>
+      <form id="logout-form" action="{{ route('logout') }}" method="POST">
+      @csrf
+      <button type="submit">Log out</button>
+      </form>
+    </div>
+
+  </div>
+  </div>
+@endguest
 
 
 
