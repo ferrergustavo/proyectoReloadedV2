@@ -19,6 +19,7 @@ class admProductController extends Controller
         $categories=Category::All();
         $brands=Brand::All();
         $products=Product::orderBy('name_p')->get();
+        $products=\App\Product::paginate(6);
         
         return view('adm.products.index',compact('categories','brands','products'));
     }
@@ -244,7 +245,8 @@ class admProductController extends Controller
     }
 
     public function adm(){
-        return view('adm.adm');
+        $brands = Brand::all();
+        return view('adm.adm')->with('brands',$brands);
     }
 
     public function brand(){

@@ -13,27 +13,34 @@ body{
 }
 
 
+.carousel-inner{
+   display:none;
+}
 
 /*---Slider--*/
 .slideshow ul,ol{
    list-style: none;
    padding:0;
    margin:0;
+   height:100%;
 }
 
 .slideshow{
    width:100%;
    position:relative;
    top:53px;
+   height:25vh;
 }
 
 .slider li, ul{
    width: 100%;
+   height:100%;
 }
 
 .slider li img {
    width:100%;
    z-index: 100;
+   height:100%;
 }
 .slider_{
    position:absolute;
@@ -273,15 +280,16 @@ button {
 
 .carousel-inner{
    width: 90%;
-   float: right;
    margin: 0 auto;
-   height: 65vh;
+   height: 58vh;
+   display:block
 }
 
 .__slider{
    display:flex;
    width: 100%;
    margin: 0 auto;
+   height: 55vh;
 }
 
 .__slider .__product{
@@ -335,5 +343,94 @@ button {
    font-weight: bold;
    cursor: pointer;
    border-radius: 20px;
+}
+}
+
+
+
+/*---Productos responsives----*/
+.__slider_responsive{
+   display: flex;
+   width: 100%;
+   margin: 0 auto;
+   flex-direction: column;
+}
+
+.__product_responsive{
+   width: 50%;
+   padding: 1%;
+   height:45vh;
+}
+
+.__product_responsive img{
+   width: 100%;
+   height: 65%;
+   padding: 0;
+}
+
+.description_responsive{
+   width: 100%;
+   height: 25%;
+   font-size: 1.7em;
+   padding:2%;
+   background-color: #222222
+}
+
+.description_responsive p {
+   font-size: 60%;
+    display: block;
+    margin: 0 0 10px 0;
+    padding: 0 0 5px 0;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.__slider_responsive button{
+   width: 100%;
+    height: 11%;
+    font-size: 70%;
+    border: 1px solid #DE3435;
+    padding: 4px 14px;
+    background-color: #DE3435;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    float: none;
+    margin: 0;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+
+
+
+@media(min-width:992px){
+.__slider_responsive{
+   display:none;
+}
+}
+
+
+@media(min-width:375px){
+   .slideshow{
+      height:30vh;
+   }
+}
+
+@media(min-width:425px){
+   .slideshow{
+      height:35vh;
+   }
+}
+
+@media(min-width:768px){
+   .slideshow{
+      height:65vh;
+   }
+
+.__product_responsive {
+   width: 50%;
+   padding: 1%;
+   height: 65vh;
 }
 }

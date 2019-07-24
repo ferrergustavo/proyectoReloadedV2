@@ -6,6 +6,7 @@
   <a href="adm" class="aReturn"><- Return</a>
   <h1 class="h1AdmProduct">ADMINISTRAR PRODUCTOS</h1>
                 <hr class="hrAdmProduct">
+                {{$products->links()}}
          <div class="containerAdmProduct">
            <a href="admProduct/create" class="aNewProduct">New Product</a>
            |

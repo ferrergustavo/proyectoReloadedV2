@@ -8,7 +8,7 @@
     <div class="slideshow">
     <ul class="slider">
         <li class="slider_ slider-active">
-            <img src="img/product-1.jpg" alt="">
+            <img src="img/product-3.jpg" alt="">
                 <section class="caption">
                     <h1>Lorem, ipsum dolor.</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, beatae?</p>
@@ -22,7 +22,7 @@
                </section>
         </li>
         <li class="slider_ slider-hidden">
-            <img src="img/product-3.jpg" alt="">
+            <img src="img/product-1.jpg" alt="">
                 <section class="caption">
                     <h1>Lorem, ipsum dolor.</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.?</p>
@@ -38,7 +38,69 @@
   </div>      
  </div>
 
- 
+
+<!-----Carousel 992----->
+<div class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="__slider">
+        @foreach($productsMouse as $productM)
+         <div class="__product">
+                <img class="" src="{{Storage::url($productM->img_p)}}" alt="1 slide"></<img>
+                <div class="description">
+                <p class="item">{{$productM->name_p}}</p>
+                <p>Price: <em>${{$productM->price}}</em></p>
+                <button class="add-to-cart" type="button">Ver Producto</button>    
+              </div>
+       </div>
+       @endforeach
+       </div>
+       </div>
+       <div class="carousel-item">
+            <div class="__slider">
+       @foreach($productsTeclado as $productT)
+       <div class="__product">      
+                <img class="" src="{{Storage::url($productT->img_p)}}" alt="1 slide"></<img>
+                <div class="description">
+                <p class="item">{{$productT->name_p}}</p>
+                <p>Price: <em>${{$productT->price}}</em></p>
+                <button class="add-to-cart" type="button">Ver Producto</button>    
+              </div>
+        </div>
+             @endforeach
+             </div>
+             </div>
+        <div class="carousel-item">
+            <div class="__slider">
+             @foreach($productsAuriculares as $productA)
+        <div class="__product">     
+                <img class="" src="{{Storage::url($productA->img_p)}}" alt="1 slide"></<img>
+                <div class="description">
+                <p class="item">{{$productA->name_p}}</p>
+                <p>Price: <em>${{$productA->price}}</em></p>
+                <button class="add-to-cart" type="button">Ver Producto</button>    
+              </div>
+        </div>
+             @endforeach
+            </div>
+     </div>
+</div>
+
+
+<!------- Productos responsive----->
+
+<div class="__slider_responsive">
+        @foreach($productsMouse as $productM)
+         <div class="__product_responsive">
+                <img class="" src="{{Storage::url($productM->img_p)}}" alt="1 slide"></<img>
+                <div class="description_responsive">
+                <p class="item">{{$productM->name_p}}</p>
+                <p>Price: <em>${{$productM->price}}</em></p>
+            </div>
+            <button class="add-to-cart" type="button">Ver Producto</button>    
+       </div>
+       @endforeach  
+</div>
 
 
  @endsection 

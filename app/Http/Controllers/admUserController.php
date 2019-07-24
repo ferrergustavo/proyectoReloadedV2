@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Brand;
 
 class admUserController extends Controller
 {
@@ -16,7 +17,8 @@ class admUserController extends Controller
     {
         $users = User::orderBy('first_name')->get();
         $users = \App\User::paginate(10);
-        return view('adm.users.index', compact('users'));
+        $brands = Brand::all();
+        return view('adm.users.index', compact('users','brands'));
     }
 
     /**
