@@ -53,7 +53,11 @@
     position: relative;
     top:-9px;
 }
-
+.Perfil__ img{
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+}
 /* --------------------------------MEDIA QUERIES------------------------------------------- */
 @media(min-width:992px){
 .container_navBar{
@@ -552,7 +556,7 @@ input[type=search] {
     position: fixed;
     background-color:rgba(19, 19, 19, 0.9);
     display: none;
-    z-index: 999;
+    z-index: 1000;
     display: flex;
     flex-direction: column;
     animation: profileSlider 1s ease-in-out;
