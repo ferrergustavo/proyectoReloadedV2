@@ -15,7 +15,9 @@
  .productMTA img{
      height: 10em;
      width: 16em;
-    
+ }
+ a.agregarBtn{
+     color: blueviolet;
  }
  .h1MTA{
      text-align: center;
@@ -25,3 +27,46 @@
      top: 1em;
      left:40%;
  }
+ .description{
+     text-align: center;
+     font-weight: bold;
+ }
+ @media(max-width:768px){
+     .productsMTA{
+         width: 48%;
+     }
+ }
+ @media(max-width:425px){
+    .productsMTA{
+        width: 87%;
+    }
+}
+
+
+@media(max-width:320px){
+  .productsMTA{
+    width: 100%;
+    position: relative;
+    right: 1.4em;
+    }
+}
+
+/* ------ INFO PRODUCTS ------*/
+.infoP{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+.infoBody{
+    position: relative;
+    top: 6%;
+    width: 25%;
+    height: 50%;
+    text-align: center;
+}
+.infoBody img{
+    width: 70%;
+    height: 70%;
+}

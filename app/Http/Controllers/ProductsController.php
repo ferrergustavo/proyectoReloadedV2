@@ -52,9 +52,10 @@ class ProductsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-
-        return view ('selectedProduct');
+    {   
+        $brands=Brand::All();
+        $products = Product::find($id);
+        return view ('infoProduct',compact('brands','products'));
     }
 
     /**
@@ -96,6 +97,7 @@ class ProductsController extends Controller
 public function getIndex()
     {
         $products = Product::all(); 
+        $products=\App\Product::paginate(4);
         $brands=Brand::All();
         $cart = Session::get('cart');
 

@@ -626,6 +626,7 @@ input[type=search] {
      animation: _searchSlider 0.5s ease-in-out;
      background-color: #7A7A7A;
  }
+<<<<<<< HEAD
  @keyframes _searchSlider{
     from{top: -330px; opacity: 0;}
     to{top: 0px; opacity: 1;}
@@ -654,3 +655,24 @@ input[type=search] {
 }
 
  
+=======
+
+
+ @media(max-width:768px){
+    .categories{
+        width: 72%;
+        right: 15%;
+    }
+    .shop_display button{
+        position: relative;
+        left: 32%;
+        top: 13%;
+    }
+ }
+ @media(max-width:425px){
+     .categories{
+         width: 100%;
+         right: 0;
+     }
+ }
+>>>>>>> daa103e331c1312f1aa60628a0e7a407a9b6cf39

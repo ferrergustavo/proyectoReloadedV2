@@ -1,5 +1,10 @@
 @extends('layouts.cart')
 @section('content')
+    @guest
+    <div class="tenesQueLogDiv">
+        <h1 class="tenesQueLog">Tenes que estar logueado para ingresar a las compras</h1>
+        </div>
+    @else
    <div class="divCart">
         <h1 class="h1Cart">Checkout Carrito</h1>
         <hr>
@@ -22,5 +27,6 @@
         <h3 class="cantidadesTotal">TOTAL: {{ $cart->totalPrice }}</h3>
         <hr>
         </div>
-    
+        @endguest
+        
 @endsection

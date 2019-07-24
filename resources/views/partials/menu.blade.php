@@ -78,7 +78,7 @@
 <!------Shop Display ----->
 <div class="shop_display">
 <span id="imgXY" class="imgX"><img src='img/X.svg' alt=""></span> 
-<button><a href="">Ver Todo</a></button>
+<button><a href="/products">Ver Todo</a></button>
 <ul class="categories">
     <li class="teclado__">
     <img src="img/teclado-navbar.jpg" alt="">
