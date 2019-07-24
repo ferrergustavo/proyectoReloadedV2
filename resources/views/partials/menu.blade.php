@@ -77,6 +77,7 @@
 <!------Shop Display ----->
 <div class="shop_display">
 <span id="imgXY" class="imgX"><img src='img/X.svg' alt=""></span> 
+<button><a href="">Ver Todo</a></button>
 <ul class="categories">
     <li class="teclado__">
     <img src="img/teclado-navbar.jpg" alt="">
@@ -206,5 +207,15 @@
   </div>
 @endguest
 
+
+<!---Busqueda Responsive---->
+  <div class="__search">
+  <span id="imgXP" class="imgX"><img src='img/X.svg' alt=""></span>
+  <form action="/search" method="get">
+  <div class="__search__">
+  <button type="submit" class="seach_button"><i class="fas fa-search"></i></button>
+  <input type="search" placeholder="" name="busqueda">
+  </div>  
+  </div>
 
 

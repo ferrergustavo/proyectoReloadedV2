@@ -1,5 +1,12 @@
 //----Profile-----//
 
+window.addEventListener('load',cargar);
+
+function cargar(){
+    containerProfile.style.display="none";
+}
+
+
 let openProfile = document.querySelector('.profile_logueado');
 let containerProfile = document.querySelector('.profile_display');
 let close_profile = document.querySelector('#imgXI');

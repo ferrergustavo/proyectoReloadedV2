@@ -3,7 +3,6 @@
  let botonSearch = document.querySelector('.search_Icon');
  let cerrarBusqueda = document.querySelector('#imgXP');
 
-
  botonSearch.addEventListener('click',abrirSearch);
  cerrarBusqueda.addEventListener('click',cerrarSearch);
  botonSearch.addEventListener('click',abrirSearchLog);
