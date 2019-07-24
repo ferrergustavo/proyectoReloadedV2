@@ -17,7 +17,7 @@
 Auth::routes();
 
 Route::get('/', 'IndexController@home')->middleware('cart');
-Route::get('/products','ProductsController@index');
+Route::get('/products','ProductsController@getIndex');
 
 Route::group(['middleware' => 'cart'], function () {
     Route::get('/', 'IndexController@home');

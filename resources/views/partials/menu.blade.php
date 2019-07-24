@@ -175,7 +175,7 @@
 <ul>
   @foreach($brands as $brand)
 <li class="search_brands"><a href=""><img src="{{Storage::url($brand->img_b)}}" alt=""><p>{{$brand->name_b}}</p></a></li>
-@endforeach
+  @endforeach
 </ul>
 </div>
 

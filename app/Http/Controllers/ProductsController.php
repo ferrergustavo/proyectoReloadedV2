@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Product;
 use Session;
 use App\Cart;
+use App\Brand;
 
 class ProductsController extends Controller
 {
@@ -16,7 +17,8 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        return view ('productos');
+        $brands=Brand::All();
+        return view ('productos')->with('brands',$brands);
     }
 
     public function productInfo(){
@@ -93,10 +95,10 @@ class ProductsController extends Controller
 public function getIndex()
     {
         $products = Product::all(); 
-        
+        $brands=Brand::All();
         $cart = Session::get('cart');
 
-        return view('productos')->with('products',$products);
+        return view('productos',compact('products','brands','cart'));
     }
 
     public function getAddToCart(Request $request, $id)
