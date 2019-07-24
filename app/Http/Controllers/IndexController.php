@@ -8,6 +8,7 @@ use App\Category;
 use App\Product;
 use DB;
 
+use Illuminate\Support\Facades\Auth;
 class IndexController extends Controller
 {
     public function home(){
@@ -19,6 +20,10 @@ class IndexController extends Controller
         return view('index',compact('brands','productsMouse','productsTeclado','productsAuriculares'));
     }
 
+    public function logout(Request $request) {
+        Auth::logout();
+        return redirect('/');
+    }
     /**
      * Display a listing of the resource.
      *

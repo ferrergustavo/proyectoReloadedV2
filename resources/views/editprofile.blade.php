@@ -8,7 +8,7 @@
 
 <div class="form_container">
 
-<form method="POST" action="{{route('update',['id' => $user->id])}}" enctype="multipart/form-data">
+<form method="POST" action="update/{{$user->id}}" enctype="multipart/form-data">
     @method('PUT')
     @csrf
 <div class="__container">
@@ -24,22 +24,20 @@
     
         <div class="labelemail">
             <label for="email" class="label">Email: </label> 
-            <input name="email" type="email" class="form_control" id="exampleInputEmail1" value="{{$user->email}}">
+            <input name="email" ty pe="email" class="form_control" id="exampleInputEmail1" value="{{$user->email}}">
         </div>
         <small id="emailHelp" class="form-text text-muted"></small>
-        <label class="cambiarcontra"><a href="">Cambiar contraseña</a></label>
         
     </div>
     <div class="avatarEdit">
-        <img src="{{asset($user->avatar)}}" alt=''>  
+        <img src="{{Storage::url(Auth::User()->avatar)}}" alt=''>  
         <label for="avatar">Cambiar avatar</label>
         <input  type="file" name="avatar" id="avatar" value="avatar"/>
     </div>   
     <div class="edit3">
         <hr>
-        <button class="eliminar">Eliminar cuenta</button>
         <button type="submit" class="guardar">guardar</button>
-        <button class="cancelar">Cancelar</button>
+        <button class="cancelar"><a href="/">Cancelar</a></button>
     </div>
 </div>               
     </form>
