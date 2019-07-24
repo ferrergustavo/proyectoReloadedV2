@@ -4,6 +4,7 @@
  let cerrarBusqueda = document.querySelector('#imgXP');
  let busquedaResponsive = document.querySelector('.__search')
  let botonSearchResponsive = document.querySelector('.botonNavbar_');
+ let cerrarBusquedaResponsive = document.querySelector('#imgXL');
 
 
  botonSearch.addEventListener('click',abrirSearch);
@@ -11,7 +12,9 @@
  botonSearch.addEventListener('click',abrirSearchLog);
  botonSearchResponsive.addEventListener('click',abrirSearchRes); 
  botonSearchResponsive.addEventListener('click',abrirSearchResLog);
- cerrarBusqueda.addEventListener('click',cerrarSearchRes);
+ cerrarBusquedaResponsive.addEventListener('click',cerrarSearchRes);
+ botonSearchResponsive.addEventListener('click',abrirSearchResLog2);
+
 
 
 
@@ -37,6 +40,16 @@
      busquedaResponsive.style.display="block";
      mySidebar.style.display='none';
  }
+ 
+ function cerrarSearchRes(){
+     busquedaResponsive.style.display="none";
+ }
+
+ function abrirSearchResLog2(){
+    console.log(busquedaResponsive);
+    busquedaResponsive.style.display="block";
+    mySidebar.style.display='none';
+}
 
  function abrirSearchResLog(){
      console.log(busquedaResponsive);
@@ -45,8 +58,5 @@
      containerProfile.style.display='none';
  }
 
- function cerrarSearchRes(){
-     busquedaResponsive.style.display="none";
- }
 
  

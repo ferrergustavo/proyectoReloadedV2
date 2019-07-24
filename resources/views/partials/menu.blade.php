@@ -211,7 +211,7 @@
 
 <!---Busqueda Responsive---->
   <div class="__search">
-  <span id="imgXP" class="imgX"><img src='img/X.svg' alt=""></span>
+  <span id="imgXL" class="imgX"><img src='img/X.svg' alt=""></span>
   <form action="/search" method="get">
   <div class="__search__">
   <button type="submit" class="seach_button"><i class="fas fa-search"></i></button>
