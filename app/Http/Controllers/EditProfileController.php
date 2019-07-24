@@ -90,7 +90,7 @@ class EditProfileController extends Controller
             
         $user->save();
 
-       return redirect("editprofile/$user->id");
+       return redirect("/");
        
     }
 

@@ -6,7 +6,8 @@
         <div class ="lineIcon"></div>
         <div class ="lineIcon"></div>
         </div>
-        <a class="botonNavBar" href="search.php" ><img class="botonNavBar"src="img/search.svg" alt="Search"></a>
+        <div class="botonNavbar_">
+        <a class="botonNavBar" href="#" ><img class="botonNavBar"src="img/search.svg" alt="Search"></a></div>
         <div class="logo"><a href="/"><img src="storage/logocolor.svg" alt=""></a></div>
         <a class="botonNavBar" href="carrito.php" ><img class="botonNavBar"src="img/carrito.svg" alt="Shopping_Cart"></a>
         @guest
