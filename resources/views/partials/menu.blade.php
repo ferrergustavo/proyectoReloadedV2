@@ -173,13 +173,9 @@
 </form> 
 <div class="search_container">
 <ul>
-<<<<<<< HEAD
-<li class="search_brands"><a href=""><img src="img/auricular-navbar.jpg" alt=""><p>Razer</p></a></li>
-=======
   @foreach($brands as $brand)
 <li class="search_brands"><a href=""><img src="{{Storage::url($brand->img_b)}}" alt=""><p>{{$brand->name_b}}</p></a></li>
 @endforeach
->>>>>>> cambiosgustavo
 </ul>
 </div>
 
