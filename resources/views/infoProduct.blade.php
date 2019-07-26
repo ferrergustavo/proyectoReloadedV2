@@ -1,5 +1,6 @@
 @extends('layouts.infoP')
 @section('InfoProduct')
+</a></div>
     <div class="infoP">
         <div class="infoBody">
             <h1 class="h1Info">{{$products->name_p}}</h1>
@@ -24,7 +25,7 @@
                         <dt>Stock:</dt>
                         <dd> {{$products->stock}}</dd>
                     </dl>
-                    <a class="agregarBtn" href= "../addToCart/{{$products->id}}"> Agregar al carrito </a> 
+                    <a class="addCartInfoP" href= "../addToCart/{{$products->id}}"> Agregar al carrito </a> 
         </div>
     </div>
 @endsection

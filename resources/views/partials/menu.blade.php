@@ -7,11 +7,11 @@
         <div class ="lineIcon"></div>
         </div>
         <div class="botonNavbar_">
-        <a class="botonNavBar" href="#" ><img class="botonNavBar"src="img/search.svg" alt="Search"></a></div>
-        <div class="logo"><a href="/"><img src="storage/logocolor.svg" alt=""></a></div>
-        <a class="botonNavBar" href="carrito.php" ><img class="botonNavBar"src="img/carrito.svg" alt="Shopping_Cart"></a>
+        <a class="botonNavBar" href="#" ><img class="botonNavBar"src="{{asset('img/search.svg')}}" alt="Search"></a></div>
+        <div class="logo"><a href="/"><img src="{{Storage::url('logocolor.svg')}}" alt=""></a></div>
+        <a class="botonNavBar" href="carrito.php" ><img class="botonNavBar"src="{{asset('img/carrito.svg')}}" alt="Shopping_Cart"></a>
         @guest
-        <a class="botonNavBar" href="login" ><img class="botonNavBar"src="img/profile.png" alt="Profile_icon"></a>
+        <a class="botonNavBar" href="login" ><img class="botonNavBar"src="{{asset('img/profile.png')}}" alt="Profile_icon"></a>
         @else
           <div  class="Perfil__">
               <img id="imgUserCel" src='{{Storage::url(Auth::user()->avatar)}}' alt="">
@@ -19,23 +19,23 @@
         @endguest
         </div>
 <div class="container_NavBarVertical">
-        <div class="logo_Vertical"><a href="index.php"><img src="storage/logocolor.svg" alt=""></a></div>
+        <div class="logo_Vertical"><a href="/"><img src="{{Storage::url('logocolor.svg')}}" alt=""></a></div>
         <div class="container_verticalIcons">
             <div class="shop_Icon">
-            <button  class="nav_Icons"><img src="img/shop_icon.svg" alt="shop_icon"> </button>
+            <button  class="nav_Icons"><img src="{{asset('img/shop_icon.svg')}}" alt="shop_icon"> </button>
             <p class="titulos_iconos">PRODUCTOS</p>
             </div> 
             <div class="cart_Icon">
-            <a  class="nav_Icons" href="shoppingCart"><img src="img/carrito.svg" alt="cart_icon"> </a>
+            <a  class="nav_Icons" href="shoppingCart"><img src="{{asset('img/carrito.svg')}}" alt="cart_icon"> </a>
             <p class="titulos_iconos">CARRITO</p>
             </div>
             <div class="search_Icon">
-            <a  class="nav_Icons" href="#"><img src="img/search.svg" alt="search_icon"> </a>
+            <a  class="nav_Icons" href="#"><img src="{{asset('img/search.svg')}}" alt="search_icon"> </a>
             <p class="titulos_iconos">BUSCAR</p>
             </div>
             @guest
             <div class="profile_Icon">
-            <a id="profile" class="nav_Icons" href="#"><img src="img/profile2.svg" alt="profile_icon"> </a>
+            <a id="profile" class="nav_Icons" href="#"><img src="{{asset('img/profile2.svg')}}" alt="profile_icon"> </a>
             <p class="titulos_iconos">PERFIL</p>
             </div>
             @else
@@ -44,13 +44,13 @@
             </div>
             @if (Auth::User()->profile==9797)
               <div class='admin_Icon'>
-                <a  class='nav_Icons' href='adm'><img src='img/admin.svg' alt='admin_icon'> </a>
+                <a  class='nav_Icons' href='adm'><img src="{{asset('img/admin.svg')}}" alt='admin_icon'> </a>
                 <p class="titulos_iconos"> ADMIN</p>
               </div>
             @endif
             @endguest
         <div class="help_Icon">
-            <a  class="nav_Icons" href="faqs"><img src="img/help.svg" alt="help_icon"> </a>
+            <a  class="nav_Icons" href="faqs"><img src="{{asset('img/help.svg')}}" alt="help_icon"> </a>
             <p class="titulos_iconos"> FAQs</p>
         </div>
         </div>
@@ -69,7 +69,7 @@
 <div class="search_container">
 <ul>
   @foreach($brands as $brand)
-<li class="search_brands"><a href=""><img src="{{Storage::url($brand->img_b)}}" alt=""><p>{{$brand->name_b}}</p></a></li>
+  <li class="search_brands"><a href="/productB/{{$brand->id}}"><img src="{{Storage::url($brand->img_b)}}" alt=""></a></li>
 @endforeach
 </ul>
 </div>

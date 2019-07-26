@@ -25,6 +25,13 @@ class IndexController extends Controller
         Auth::logout();
         return redirect('/');
     }
+
+    public function productB($id){
+        $brands = Brand::All();
+        $products = Product::where('brand_id','=',$id)->paginate(6);
+        
+        return view('productos',compact('brands','products'));
+    }
     /**
      * Display a listing of the resource.
      *

@@ -58,7 +58,7 @@ class EditProfileController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
-        return view('editProfile', compact('user'));
+        return view('editprofile', compact('user'));
     }
 
     /**

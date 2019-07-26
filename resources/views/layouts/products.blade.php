@@ -1,4 +1,5 @@
 @include('partials_pau.header')
 @include('partials.menu')
 @yield ('content')
+@yield('noResult')
 @include('partials.footer')

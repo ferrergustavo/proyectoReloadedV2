@@ -97,7 +97,7 @@ class ProductsController extends Controller
 public function getIndex()
     {
         $products = Product::all(); 
-        $products=\App\Product::paginate(4);
+        $products=\App\Product::paginate(6);
         $brands=Brand::All();
         $cart = Session::get('cart');
 

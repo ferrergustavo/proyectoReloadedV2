@@ -22,6 +22,7 @@ Route::get('/teclado','ProductsController@productSelectT');
 Route::get('/mouse','ProductsController@productSelectM');
 Route::get('/auriculares','ProductsController@productSelectA');
 Route::get('/infoProduct/{id}','ProductsController@show')->middleware('cart');
+Route::get('/productB/{id}','IndexController@productB');
 
 Route::group(['middleware' => 'cart'], function () {
     Route::get('/', 'IndexController@home');

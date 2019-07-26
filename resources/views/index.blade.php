@@ -10,22 +10,22 @@
         <li class="slider_ slider-active">
             <img src="img/product-3.jpg" alt="">
                 <section class="caption">
-                    <h1>Lorem, ipsum dolor.</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, beatae?</p>
+                    <h1>Eleva tu experiencia de juego.</h1>
+                    <p>Todos los accesesorios que necesitas estan aca</p>
                 </section>
         </li>
         <li class="slider_ slider-hidden">
             <img src="img/product-2.jpg" alt="">
                 <section class="caption">
-                    <h1>Lorem, ipsum dolor.</h1>
-                    <p>Lorem ipsum dolor sit amet adipisicing elit. Sapiente, beatae?</p>
+                    <h1>Aprovecha nuestros descuentos.</h1>
+                    <p>Tenemos ofertas todas las semanas</p>
                </section>
         </li>
         <li class="slider_ slider-hidden">
             <img src="img/product-1.jpg" alt="">
                 <section class="caption">
-                    <h1>Lorem, ipsum dolor.</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.?</p>
+                    <h1>Forma parte de Blackeyes.</h1>
+                    <p>Registrate para recibir nuestras ultimas noticias</p>
                 </section>
         </li>
     </ul>  

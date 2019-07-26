@@ -15,7 +15,7 @@
      </div>
 
     </section>
-    
+    {{$products->links()}}
 
     
     </body>

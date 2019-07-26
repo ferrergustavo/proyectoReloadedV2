@@ -1,16 +1,19 @@
 @extends('layouts.products')
 @section ('content')
-<body>
-    <section>
-    <article class="banner"><img src="img/Banner Results.jpg" alt="Banner"></article>
-    <article class="productos">
-    <a href="/productInfo">
-         <img src=img/razer3.jpg alt="razer3"> 
-         <h3> PRECIO DE PRODUCTO</h3>
-         <h5> Nombre de producto</h5>
-        </a>
-    </article>
-    </section>
-    </body>
+        <div class="h1Search">
+            <h1>Buscaste:<strong>{{$input}}</strong></h1>    
+        </div>
+    <div id="productsMTA" class="productsMTA">
+        @foreach($products as $product)
+        <div class="productMTA">      
+                    <img class="" src="{{Storage::url($product->img_p)}}" alt="1 slide"></<img>
+                    <div class="description">
+                    <p class="item">{{$product->name_p}}</p>
+                    <p>Price: <em>${{$product->price}}</em></p>
+                    <a class="" href= "addToCart/{{$product->id}}"> Agregar al carrito </a> 
+                </div>
+            </div>
+        @endforeach
+</div>
 @endsection
 @yield('footer') 
